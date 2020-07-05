@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta content="notranslate" name="google">
+    <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
+    <link rel="stylesheet" href="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#fffff">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <title>Корзина</title>
+</head>
+
+<body>
+    <div class="page__inner">
+        <div class="page__content">
+            <header class="page-header">
+                <div class="page-header__top">
+                    <div class="container">
+                        <div class="page-header__row page-header__row--sb">
+                            <div class="page-header__logo">
+                                <div class="d-xl-none">
+                                    <button class="burger page-header__menu js-menu" aria-label="Показать ничто"><span>Показать ничто</span></button>
+                                </div><a class="logo" href="/"><img src="img/icon/logo.png" alt="Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия" width="66" height="45" />
+                                    <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</p>
+                                </a>
+                            </div>
+                            <div class="page-header__info">
+                                <div class="d-xl-none">
+                                    <button class="icon-btn">
+                                        <svg width="22" height="22" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-phone"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="d-xl-none"><a class="icon-btn" href="basket.html">
+                                        <svg width="27" height="23" fill="none">
+                                            <use xlink:href="img/symbols.svg#basket"></use>
+                                        </svg><span class="icon-btn__quan">5</span></a></div>
+                                <div class="d-xl-none">
+                                    <button class="icon-btn">
+                                        <svg width="20" height="20" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-serch"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="d-none d-xl-block">
+                                    <div class="phone page-header__phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
+                                        <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                    </div>
+                                </div><a class="basket d-none d-xl-block" href="basket.html">
+                                    <div class="basket__row">
+                                        <div class="basket__icon">
+                                            <svg width="30" height="30">
+                                                <use xlink:href="img/symbols.svg#basket"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="basket__content d-none d-xl-block"><strong>Корзина</strong>
+                                            <p>5 позиций на 10 860 ₽</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header__bottom d-none d-xl-block page-header__bottom--line">
+                    <div class="container">
+                        <div class="container__left">
+                            <div class="page-header__row page-header__row--sb">
+                                <nav class="navigation">
+                                    <button class="burger navigation__burger-sub" aria-label="Показать ничто"><span>Показать ничто</span></button>
+                                    <ul class="navigation__list">
+                                        <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог</a></li>
+                                        <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
+                                        <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
+                                        <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>
+                                        <li class="navigation__item"><a class="navigation__link" href="template-page.html">Контакты</a></li>
+                                    </ul>
+                                </nav>
+                                <form class="form page-header__form">
+                                    <label class="field-text"><span class="field-text__input-wrap">
+                        <input class="field-text__input field-text__input--radius field-text__input--tr field-text__input--btn-r" type="text" placeholder="Искать" name="search"/>
+                        <button class="field-text__btn">
+                          <svg width="15" height="15">
+                            <use xlink:href="img/symbols.svg#icon-serch"></use>
+                          </svg>
+                        </button></span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="content">
+                    <div class="container">
+                        <ul class="breadcrumbs breadcrumbs--xs-line" aria-label="Breadcrumb" role="navigation">
+                            <li class="breadcrumbs__item"><a href="index.html">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item"><span>Корзина</span>
+                            </li>
+                        </ul>
+                        <h1 class="title-h title-h--black content__title">Корзина</h1>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="page__footer-wrapper">
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="page-footer__content">
+                        <div class="page-footer__row">
+                            <div class="page-footer__col page-footer__col--xl-4">
+                                <p class="copyright">2013 ©</p>
+                                <p class="copyright">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»</p><a class="develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
+                            </div>
+                            <div class="page-footer__col page-footer__col--xl-8">
+                                <div class="page-footer__">
+                                    <div class="page-footer__info">
+                                        <div class="phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
+                                            <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                        </div><a href="mailto:baimur@yandex.ru">baimur@yandex.ru</a>
+                                    </div>
+                                    <div class="page-footer__address">
+                                        <p>Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)</p>
+                                        <p>Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="mb-menu" id="menu" tabindex="-1" role="dialog">
+        <div class="mb-menu__dialog">
+            <header class="page-header">
+                <div class="page-header__top">
+                    <div class="container">
+                        <div class="page-header__row page-header__row--sb">
+                            <div class="page-header__logo">
+                                <div class="d-xl-none">
+                                    <button class="close page-header__menu" aria-label="Закрыть меню" data-fancybox-close=""><span></span></button>
+                                </div><a class="logo" href="/"><img src="img/icon/logo.png" alt="Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия" width="66" height="45" />
+                                    <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</p>
+                                </a>
+                            </div>
+                            <div class="page-header__info">
+                                <div class="d-xl-none">
+                                    <button class="icon-btn">
+                                        <svg width="22" height="22" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-phone"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="d-xl-none"><a class="icon-btn" href="basket.html">
+                                        <svg width="27" height="23" fill="none">
+                                            <use xlink:href="img/symbols.svg#basket"></use>
+                                        </svg><span class="icon-btn__quan">5</span></a></div>
+                                <div class="d-xl-none">
+                                    <button class="icon-btn">
+                                        <svg width="20" height="20" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-serch"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="mb-menu__navigation">
+                <div class="container">
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a class="navigation__link" href="train-carriage.html">Поезда и вагоны</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="bonus.html">Льготы и бонусы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="return-ticket.html">Возврат билетов</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="partner.html">Партнерам</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="about.html">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="mb-menu__documents">
+                <div class="container">
+                    <ul class="mb-menu__documents-list">
+                        <li class="mb-menu__documents-item"><a class="mb-menu__documents-link" href="#offer" data-fancybox="">Обработка персональных данных</a></li>
+                        <li class="mb-menu__documents-item"><a class="mb-menu__documents-link" href="#confidition" data-fancybox="">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            <footer class="mb-menu__footer">
+                <div class="container">
+                    <div class="mb-menu__contact">
+                        <p class="mb-menu__address"><span>129075, г.Москва</span> ул. Шереметьевская, д. 85, стр.</p>
+                        <div class="mb-menu__contact-link"><a href="tel:88007755453">8 800 775 54 53</a></div>
+                        <div class="mb-menu__contact-link"><a href="mailto:bilet@gse-online.ru">bilet@gse-online.ru</a></div>
+                    </div>
+                    <div class="developer mb-menu__developer">
+                        <div class="developer__row">
+                            <div class="developer__col"><a class="developer__link" href="https://www.aidem.ru/" target="_blank"><span>Developed by</span>
+                                    <svg width="46" height="17">
+                                        <use xlink:href="img/symbols.svg#icon-aidem"></use>
+                                    </svg></a></div>
+                            <div class="developer__col"><a class="developer__link" href="https://gk-sneg.com/" target="_blank">
+                                    <svg width="35" height="19">
+                                        <use xlink:href="img/symbols.svg#icon-sneg"></use>
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                    <p class="mb-menu__copyright">© 2019, АО ТК «Гранд Сервис Экспресс»</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="libs/inputmask/dist/inputmask.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

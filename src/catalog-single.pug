@@ -1,0 +1,135 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header()
+block content
+  main
+    .content
+      .container
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', 'index.html')
+          +breadcrumbs-item('Каталог', 'catalog.html')
+          +breadcrumbs-item('Пряжа', 'catalog.html')
+          +breadcrumbs-item('Alize', 'catalog.html')
+          +breadcrumbs-item('Show punto batİk design Show punto batİk design ')
+        article.product-card
+          h2.title-h.title-h--black.product-card__title Show punto batİk design Show punto batİk design
+          .content__row
+            .content__col.content__col--xl-3
+              .product-card__slider
+                .swiper-container-relative.product-card__slider-mb
+                  .swiper-container.gallery-top
+                    .swiper-wrapper
+                      .swiper-slide
+                        .product-card__img.product-card__img--height
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--height
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--height
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--height
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--height
+                          img(src="img/content/product-1.png")
+                  button.swiper-button-circle.swiper-button-circle--prev(type="button")
+                    svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+                  button.swiper-button-circle.swiper-button-circle--next(type="button")
+                    svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+                .swiper-container.gallery-thumbs
+                  .swiper-wrapper
+                    .swiper-slide
+                      .product-card__img.product-card__img--height-thumb
+                        img(src="img/content/product-1.png")
+                    .swiper-slide
+                      .product-card__img.product-card__img--height-thumb
+                        img(src="img/content/product-1.png")
+                    .swiper-slide
+                      .product-card__img.product-card__img--height-thumb
+                        img(src="img/content/product-1.png")
+                    .swiper-slide
+                      .product-card__img.product-card__img--height-thumb
+                        img(src="img/content/product-1.png")
+                    .swiper-slide
+                      .product-card__img.product-card__img--height-thumb
+                        img(src="img/content/product-1.png")
+
+
+
+            .content__col.content__col--xl-9
+              .product-card__content
+                .product-card__buy
+                  strong.product-card__price 905 ₽/#[sub упак.]
+                  a.btn.btn--white.btn--s-middle Купить в один клик
+                +table().table--striped.product-card__table
+                  tr
+                    td Цена за:
+                    td 1 упаковку
+                  tr
+                    td В упаковке:
+                    td 4 мотка
+                  tr
+                    td Моток:
+                    td 100 гр — 350 м
+                  tr
+                    td Состав:
+                    td 100% Акрил (антипиллинг акрил)
+                  tr
+                    td И так:
+                    td Далее
+                .product-card__quantity
+                  .product-card__quantity-info
+                    .product-card__quantity-group
+                      strong.product-card__quantity-text Кол-во подвидов:
+                      a(href="#") 10
+                    .product-card__quantity-group
+                      strong.product-card__quantity-text В наличии:
+                      span.text-warning Много
+                  .product-card__quantity-choice
+                    a.btn.btn--main.btn--r-middle Выбрать
+                h3.product-card__title-desc Описание
+                .product-card__desc
+                  p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
+                  button.btn.btn--link Показать больше
+
+    .content.content--news
+      .container
+        .d-none.d-xl-block
+          header.title-line
+            h3.title-h.title-h--black.title-line__line Выберите товар
+        .content__row.content__row--col-mb.content__mob-swipe
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--xl-2
+            +product-preview('6353')
+block footer
+  +page-footer()

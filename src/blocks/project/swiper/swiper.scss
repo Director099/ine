@@ -1,0 +1,131 @@
+.swiper-container--visible {
+  overflow: visible;
+}
+
+.swiper-button {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  border: 0;
+  width: 60px;
+  height: 100%;
+  padding: 0;
+  z-index: 1;
+  background-color: rgba($white, 0.5);
+  cursor: pointer;
+  opacity: 0;
+  transition: $time;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.js-banner .swiper-slide {
+  opacity: 0.3;
+  transition: $time;
+}
+
+.js-banner .swiper-slide-active {
+  opacity: 1;
+}
+
+.js-category .swiper-slide {
+  @media (max-width: $screen-xl - 1) {
+    max-width: 130px;
+  }
+}
+
+.js-category {
+  @media (max-width: $screen-xl - 1) {
+   overflow: visible;
+  }
+}
+
+.swiper-button-circle {
+  display: none;
+
+  @media (min-width: $screen-xl) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border: none;
+    padding: 0;
+    z-index: 1;
+    transition: $time;
+
+    &--next {
+      right: -15px;
+    }
+
+    &--prev {
+      left: -15px;
+      transform: translateY(-50%) rotate(-180deg);
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.swiper-container-relative {
+  position: relative;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  z-index: -1;
+}
+
+.gallery-thumbs .swiper-slide {
+  opacity: 0.6;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+
+  @media (max-width: $screen-xl - 1) {
+    width: 5px;
+    height: 5px;
+    margin: 0 2.5px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #566DFB;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 10px;
+
+  @media (min-width: $screen-xl) {
+    bottom: 27px;
+  }
+}

@@ -1,0 +1,142 @@
+.product-card__title {
+  margin-bottom: 20px;
+}
+
+.product-card__content {
+  max-width: 750px;
+}
+
+.product-card__table {
+  margin-bottom: 20px;
+  font-size: 12px;
+
+  @media (min-width: $screen-xl) {
+    max-width: 457px;
+  }
+}
+
+.product-card__table td:first-child {
+  max-width: 60px;
+}
+
+.product-card__title-desc {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $black;
+  margin-bottom: 15px;
+  text-align: center;
+
+  @media (min-width: $screen-xl) {
+    text-align: left;
+  }
+}
+
+.product-card__desc {
+  color: $black;
+}
+
+.product-card__quantity-text {
+  display: inline-block;
+  margin-right: 2px;
+  padding-left: 13px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.product-card__quantity-group {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.product-card__quantity-info {
+  margin-right: 20px;
+  margin-top: 6px;
+}
+
+.product-card__quantity {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.product-card__price {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 22px;
+  color: #3A426D;
+  margin-right: 20px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.product-card__price sub {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  bottom: 0;
+}
+
+.product-card__buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-xl) {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+.product-card__slider {
+  text-align: center;
+  margin-bottom: 25px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 0;
+  }
+}
+
+.product-card__img {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #6f6055;
+    filter: blur(15px);
+    z-index: -1;
+  }
+
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  &--height {
+    height: 340px;
+  }
+
+  &--height-thumb {
+    height: 69px;
+  }
+}
+
+.product-card__slider-mb {
+  margin-bottom: 10px;
+}
+

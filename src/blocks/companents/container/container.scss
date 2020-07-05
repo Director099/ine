@@ -1,0 +1,16 @@
+.container {
+  @include container();
+
+  &--xs-full {
+    @media (max-width: $screen-xl - 1) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.container__left {
+  @media (min-width: $screen-xl) {
+    padding-left: 98px;
+  }
+}

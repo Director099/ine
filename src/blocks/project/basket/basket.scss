@@ -1,0 +1,50 @@
+.basket {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.basket__icon {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  fill: none;
+}
+
+.basket__icon-quan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  border-radius: 50px;
+  background-color: $color-main;
+}
+
+.basket__row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.basket__content {
+  margin-left: 10px;
+}
+
+.basket__content strong {
+  display: block;
+  font-weight: 500;
+  line-height: 16px;
+  margin-bottom: 3px;
+}
+
+.basket__content p {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+}

@@ -1,0 +1,12 @@
+.n-article__content {
+  @media (min-width: $screen-xl) {
+    max-width: 750px;
+  }
+}
+
+.n-article__title {
+  margin-bottom: 34px;
+  @media (min-width: $screen-xl) {
+    margin-bottom: 30px;
+  }
+}

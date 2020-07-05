@@ -1,0 +1,17 @@
+.tab-filter {
+  @include ul-none;
+  @include row(10px, 10px, 10px, 10px, 10px);
+  margin-bottom: 10px;
+}
+
+.tab-filter__item {
+  padding-left: 5px;
+  padding-right: 5px;
+  flex-basis: auto;
+  margin-bottom: 10px;
+}
+
+.tab-filter__btn.active {
+  border-color: #566DFB;
+  color: #566DFB;
+}

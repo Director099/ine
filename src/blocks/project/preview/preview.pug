@@ -1,0 +1,7 @@
+mixin preview(data)
+  a.preview(href="template-page.html")&attributes(attributes)
+    article.preview__wrap
+      .preview__img
+        img(src=`img/content/news-${data.img}.jpg` alt= data.title)
+      h3.preview__title= data.title
+      span.preview__data= data.data

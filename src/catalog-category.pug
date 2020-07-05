@@ -1,0 +1,43 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header()
+block content
+  main
+    .content
+      .container
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', 'index.html')
+          +breadcrumbs-item('Каталог', 'catalog.html')
+          +breadcrumbs-item('Категории товаров')
+        header.content__header.content__header--c-main
+          h2.title-h.content__title Категории товаров
+        +js-category()
+    .content
+      .container
+        header.content__header.content__header--c-main
+          h2.title-h.content__title Каталог товаров
+        .content__row.content__row--xs-6.content__row--col-mb
+          .content__col.content__col--6
+            +product()
+          .content__col.content__col--6
+            +product()
+          .content__col.content__col--6
+            +product()
+          .content__col.content__col--6
+            +product()
+          .content__col.content__col--6
+            +product()
+          .content__col.content__col--6
+            +product()
+          //.content__col.content__col--6
+          //  +product()
+          //.content__col.content__col--6
+          //  +product()
+          //.content__col.content__col--6
+          //  +product()
+        button.btn.btn--lighten.btn--s-big.content__btn-more Показать больше
+block footer
+  +page-footer()

@@ -1,0 +1,100 @@
+// Style plagin
+@import "variables";
+
+// My style
+
+@import "grid-mixins";
+
+@import "functions";
+
+@import "fonts";
+@import "global";
+
+@import "../blocks/companents/page/page";
+@import "../blocks/companents/btn/btn";
+@import "../blocks/companents/container/container";
+@import "../blocks/companents/logo/logo";
+@import "../blocks/companents/field-text/field-text";
+@import "../blocks/companents/title-h/title-h";
+@import "../blocks/companents/burger/burger";
+@import "../blocks/companents/breadcrumbs/breadcrumbs";
+@import "../blocks/companents/tabs/tabs";
+@import "../blocks/companents/table/table";
+@import "../blocks/companents/display/display";
+@import "../blocks/companents/close/close";
+
+@import "../blocks/project/swiper/swiper";
+@import "../blocks/project/tab-filter/tab-filter";
+@import "../blocks/project/page-header/page-header";
+@import "../blocks/project/page-footer/page-footer";
+@import "../blocks/project/order-page/order-page";
+@import "../blocks/project/content/content";
+@import "../blocks/project/preview/preview";
+@import "../blocks/project/product/product";
+@import "../blocks/project/navigation/navigation";
+@import "../blocks/project/n-article/n-article";
+@import "../blocks/project/main-banner/main-banner";
+@import "../blocks/project/category/category";
+@import "../blocks/project/product-card/product-card";
+@import "../blocks/project/product-preview/product-preview";
+@import "../blocks/project/phone/phone";
+@import "../blocks/project/basket/basket";
+@import "../blocks/project/mb-menu/mb-menu";
+
+.text-danger {
+  color: $color-danger;
+}
+
+.text-main {
+  color: $color-main;
+}
+
+.text-success {
+  color: $color-success;
+}
+
+.text-warning {
+  color: $color-success;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin-left: 17px;
+    background-color: #DFE2ED;
+  }
+}
+
+.title-line__line {
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  margin-left: 25px;
+}
+
+.icon-btn__quan {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  border-radius: 50px;
+  background-color: $color-main;
+}

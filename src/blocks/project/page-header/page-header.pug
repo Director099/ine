@@ -1,0 +1,63 @@
+mixin page-header(mod)
+  header.page-header
+    .page-header__top
+      .container
+        .page-header__row.page-header__row--sb
+          .page-header__logo
+            .d-xl-none
+              +burger('Показать ничто').page-header__menu.js-menu
+            +logo('/')
+              img(src='img/icon/logo.png', alt='Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия', width='66', height='45')
+              p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия
+          .page-header__info
+            .d-xl-none
+              button.icon-btn
+                svg(width="22" height="22" fill="none")
+                  use(xlink:href="img/symbols.svg#icon-phone")
+            .d-xl-none
+              a.icon-btn(href="basket.html")
+                svg(width="27", height="23" fill="none")
+                  use(xlink:href="img/symbols.svg#basket")
+                span.icon-btn__quan 5
+            .d-xl-none
+              button.icon-btn
+                svg(width="20" height="20" fill="none")
+                  use(xlink:href="img/symbols.svg#icon-serch")
+            .d-none.d-xl-block
+              +phone().page-header__phone
+            a.basket.d-none.d-xl-block(href="basket.html")
+              .basket__row
+                .basket__icon
+                  svg(width="30", height="30")
+                    use(xlink:href="img/symbols.svg#basket")
+                .basket__content.d-none.d-xl-block
+                  strong Корзина
+                  p 5 позиций на 10 860 ₽
+    .page-header__bottom.d-none.d-xl-block(class=`${!mod ? 'page-header__bottom--line' : ''}`)
+      .container
+        .container__left
+          .page-header__row.page-header__row--sb
+            nav.navigation
+              +burger('Показать ничто').navigation__burger-sub
+              ul.navigation__list
+                li.navigation__item
+                  a.navigation__link(href="catalog.html") Каталог
+                li.navigation__item
+                  a.navigation__link(href="template-page.html") О компании
+                li.navigation__item
+                  a.navigation__link(href="template-page.html") Условия работы
+                li.navigation__item
+                  a.navigation__link(href="news.html") Новости
+                li.navigation__item
+                  a.navigation__link(href="template-page.html") Контакты
+            form.form.page-header__form
+              +field-text({
+                attrs: {
+                  placeholder: 'Искать',
+                  name: 'search',
+                  class: 'field-text__input--radius field-text__input--tr field-text__input--btn-r'
+                }
+              })
+                button.field-text__btn
+                  svg(width="15", height="15")
+                    use(xlink:href="img/symbols.svg#icon-serch")

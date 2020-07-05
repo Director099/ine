@@ -1,0 +1,91 @@
+extends pug/layout.pug
+
+block meta
+  title Новости
+block header
+  +page-header(false)
+block content
+  main
+    .content.content--news
+      .container
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', 'index.html')
+          +breadcrumbs-item('Новости')
+        h1.title-h.content__title Новости
+        .content__row.content__row--col-mb
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 1,
+                title: 'Повседневная практика показывает важность событий',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 2,
+                title: 'Значимость этих проблем',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 3,
+                title: 'С другой стороны',
+                data: '26 Апреля 2020  ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 4,
+                title: 'Уважаемые покупатели!\n',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 1,
+                title: 'Повседневная практика показывает важность событий',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 2,
+                title: 'Значимость этих проблем',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 3,
+                title: 'С другой стороны',
+                data: '26 Апреля 2020  ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 4,
+                title: 'Уважаемые покупатели!\n',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 1,
+                title: 'Повседневная практика показывает важность событий',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 2,
+                title: 'Значимость этих проблем',
+                data: '26 Апреля 2020 ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 3,
+                title: 'С другой стороны',
+                data: '26 Апреля 2020  ',
+            })
+          .content__col.content__col--sm-6.content__col--xl-3
+            +preview({
+                img: 4,
+                title: 'Уважаемые покупатели!\n',
+                data: '26 Апреля 2020 ',
+            })
+        button.btn.btn--lighten.btn--s-big.content__btn-more Показать больше
+block footer
+  +page-footer()
+

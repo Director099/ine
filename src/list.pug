@@ -1,0 +1,27 @@
+extends pug/layout.pug
+
+block meta
+  title Список страниц
+block header
+  +page-header()
+block content
+  main
+    ul
+      li
+        a(href='index.html') Главная
+      li
+        a(href='news.html') Новости
+      li
+        a(href='catalog.html') Каталог (Без фильтра)
+      li
+        a(href='catalog-category.html') Каталог с выбранной категории
+      li
+        a(href='catalog-single.html') Каталог внутряк
+      li
+        a(href='template-page.html') Записть (о компании, контакты, новость)
+      li
+        a(href='basket.html') Корзина
+      li
+        a(href='order.html') Оформление заказа Корзина (стандартный функционал 1С-битрикс)
+block footer
+  +page-footer()

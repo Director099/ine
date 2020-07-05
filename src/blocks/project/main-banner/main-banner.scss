@@ -1,0 +1,38 @@
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+  padding: 10px 15px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-xl) {
+    min-height: 450px;
+    padding: 10px 97px;
+
+    border: 1px solid #DFE2ED;
+    border-radius: 5px;
+  }
+}
+
+.main-banner__content {
+  max-width: 514px;
+}
+
+.main-banner__title {
+  margin-bottom: 10px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 30px;
+  }
+}
+
+.main-banner__btn {
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 8.5px;
+    padding-bottom: 8.5px;
+  }
+}

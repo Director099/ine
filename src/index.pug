@@ -1,0 +1,99 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header(true)
+block content
+  main
+    .content.content--overflow.content--xs-pb
+      .container.container--xs-full
+        .swiper-container.swiper-container--visible.js-banner
+          .swiper-wrapper
+            .swiper-slide
+              +main-bunner()
+            .swiper-slide
+              +main-bunner()
+            .swiper-slide
+              +main-bunner()
+            .swiper-slide
+              +main-bunner()
+            .swiper-slide
+              +main-bunner()
+          .swiper-pagination
+          button.swiper-button.swiper-button--prev.d-none.d-xl-block(type="button")
+            svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M10.6584 1.6831L2 10.3415L10.6584 19" stroke="#3E5268" stroke-width="2")
+          button.swiper-button.swiper-button--next.d-none.d-xl-block(type="button")
+            svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M10.6584 1.6831L2 10.3415L10.6584 19" stroke="#3E5268" stroke-width="2")
+    .content.content--xs-pb.content--overflow
+      .container
+        header.content__header.content__header--c-main.content__header--center
+          h2.title-h.content__title Выбирайте нужную категорию
+          p.subtitle.content__subtitle Качественная пряжа, швейная фурнитура и товары для рукоделия оптом по лучшим ценам
+        +js-category()
+    .content.content--xs-pb
+      .container
+        header.content__header.content__header--c-main.content__header--center
+          h1.title-h.content__title Рекомендуем ознакомиться
+          p.subtitle.content__subtitle Мы подготовили и собрали наиболее востребуемые товары, новинки и акции
+        +tab-filter
+          +tab-filter-item('Всё', 'all', true)
+          +tab-filter-item('Советуем', 'advice')
+          +tab-filter-item('Новинки', 'new')
+          +tab-filter-item('Акции', 'sale')
+        .content__row.content__row--xs-6.content__row--col-mb
+          .content__col.content__col--6(data-filter="advice")
+            +product()
+          .content__col.content__col--6(data-filter="new")
+            +product()
+          .content__col.content__col--6(data-filter="advice")
+            +product()
+          .content__col.content__col--6(data-filter="sale")
+            +product()
+          .content__col.content__col--6(data-filter="sale")
+            +product()
+          .content__col.content__col--6(data-filter="sale")
+            +product()
+          //.content__col.content__col--6(data-filter="advice")
+          //  +product()
+          //.content__col.content__col--6(data-filter="advice")
+          //  +product()
+          //.content__col.content__col--6(data-filter="sale")
+          //  +product()
+        button.btn.btn--lighten.btn--s-big.content__btn-more Показать больше
+    .content.content--news.content--xs-pb0
+      .container
+        header.content__header.content__header--c-main.content__header--xs-center
+          h2.title-h.content__title Новости
+            a.title-h__link.title-h__link--xs-none(href="news.html") Все записи
+        .content__row
+          .content__col.content__col--xl-3
+            +preview({
+              img: 1,
+              title: 'Повседневная практика показывает важность событий',
+              data: '26 Апреля 2020 ',
+            }).preview--mob
+          .content__col.content__col--xl-3
+            +preview({
+              img: 2,
+              title: 'Значимость этих проблем',
+              data: '26 Апреля 2020 ',
+            }).preview--mob
+          .content__col.content__col--xl-3
+            +preview({
+              img: 3,
+              title: 'С другой стороны',
+              data: '26 Апреля 2020  ',
+            }).preview--mob
+          .content__col.content__col--xl-3
+            +preview({
+              img: 4,
+              title: 'Уважаемые покупатели!\n',
+              data: '26 Апреля 2020 ',
+            }).preview--mob
+        .content__all-news.d-xl-none
+          a(href="news.html") Все записи
+block footer
+  +page-footer()

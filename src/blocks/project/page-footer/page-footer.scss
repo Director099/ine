@@ -1,0 +1,30 @@
+.page-footer {
+  padding-top: 64px;
+  padding-bottom: 51px;
+  background-color: #3E5268;
+  color: $white;
+}
+
+.page-footer__content {
+  max-width: 1045px;
+}
+
+.page-footer__row {
+  @include row();
+}
+
+.page-footer__col {
+  @include make-col(12);
+
+  &--xl-3 {
+    @include col(xl, 3, 12);
+  }
+
+  &--xl-4 {
+    @include col(xl, 4, 12);
+  }
+
+  &--xl-8 {
+    @include col(xl, 8, 12);
+  }
+}

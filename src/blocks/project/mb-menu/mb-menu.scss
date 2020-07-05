@@ -1,0 +1,142 @@
+.mb-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  height: 100%;
+  padding: 0;
+  z-index: 99;
+  display: none;
+}
+
+.mb-menu__dialog {
+  height: 100%;
+  background-color: #882051;
+}
+
+.mb-menu__header {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+
+.mb-menu__close {
+  width: 15px;
+  line-height: 15px;
+  color: $white;
+}
+
+.mb-menu__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 80px;
+}
+
+.mb-menu__navigation {
+  background-color: $white;
+}
+
+.mb-menu__navigation .navigation {
+  display: block;
+}
+
+.mb-menu__list {
+  @include ul-none();
+}
+
+.mb-menu__item {
+  border-bottom: 1px solid #DDDDDD;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.mb-menu__link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: $black;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 18px;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #C2C2C2;
+    border-right: 1px solid #C2C2C2;
+  }
+}
+
+.mb-menu__documents {
+  padding: 12px 0;
+  background-color: #F6F6F6;
+}
+
+.mb-menu__documents-list {
+  @include ul-none();
+}
+
+.mb-menu__documents-link {
+  display: inline-block;
+  font-size: 12px;
+  padding: 7px 0;
+  //color: $color-secondary;
+  text-decoration: none;
+}
+
+.mb-menu__footer {
+  padding-top: 24px;
+  padding-bottom: 17px;
+  background-color: #882051;
+}
+
+.mb-menu__address {
+  color: $white;
+}
+
+.mb-menu__address {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.mb-menu__address span {
+  display: block;
+}
+
+.mb-menu__contact-link a {
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
+}
+
+.mb-menu__contact {
+  margin-bottom: 32px;
+}
+
+.mb-menu__developer {
+  margin-bottom: 12px;
+}
+
+.mb-menu__copyright {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  color: #E2B6CB;
+}
+
+.mb-menu .fancybox-button {
+  display: none;
+}

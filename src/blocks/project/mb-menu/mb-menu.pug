@@ -1,0 +1,69 @@
+mixin mb-menu(src)
+  .mb-menu(id="menu", tabindex='-1', role='dialog')
+    .mb-menu__dialog
+      header.page-header
+        .page-header__top
+          .container
+            .page-header__row.page-header__row--sb
+              .page-header__logo
+                .d-xl-none
+                  button.close.page-header__menu(aria-label="Закрыть меню" data-fancybox-close="")
+                    span
+                +logo('/')
+                  img(src='img/icon/logo.png', alt='Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия', width='66', height='45')
+                  p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия
+              .page-header__info
+                .d-xl-none
+                  button.icon-btn
+                    svg(width="22" height="22" fill="none")
+                      use(xlink:href="img/symbols.svg#icon-phone")
+                .d-xl-none
+                  a.icon-btn(href="basket.html")
+                    svg(width="27", height="23" fill="none")
+                      use(xlink:href="img/symbols.svg#basket")
+                    span.icon-btn__quan 5
+                .d-xl-none
+                  button.icon-btn
+                    svg(width="20" height="20" fill="none")
+                      use(xlink:href="img/symbols.svg#icon-serch")
+      .mb-menu__navigation
+        .container
+          nav.navigation
+            ul.navigation__list
+              li.navigation__item
+                a.navigation__link(href="train-carriage.html") Поезда и вагоны
+              li.navigation__item
+                a.navigation__link(href="bonus.html") Льготы и бонусы
+              li.navigation__item
+                a.navigation__link(href="return-ticket.html") Возврат билетов
+              li.navigation__item
+                a.navigation__link(href="partner.html") Партнерам
+              li.navigation__item
+                a.navigation__link(href="about.html") О компании
+      .mb-menu__documents
+        .container
+          ul.mb-menu__documents-list
+            li.mb-menu__documents-item
+              a.mb-menu__documents-link(href="#offer" data-fancybox="") Обработка персональных данных
+            li.mb-menu__documents-item
+              a.mb-menu__documents-link(href="#confidition" data-fancybox="") Политика конфиденциальности
+      footer.mb-menu__footer
+        .container
+          .mb-menu__contact
+            p.mb-menu__address #[span 129075, г.Москва] ул. Шереметьевская, д. 85, стр.
+            .mb-menu__contact-link
+              a(href="tel:88007755453") 8 800 775 54 53
+            .mb-menu__contact-link
+              a(href="mailto:bilet@gse-online.ru") bilet@gse-online.ru
+          .developer.mb-menu__developer
+            .developer__row
+              .developer__col
+                a.developer__link(href="https://www.aidem.ru/" target="_blank")
+                  span Developed by
+                  svg(width="46", height="17")
+                    use(xlink:href="img/symbols.svg#icon-aidem")
+              .developer__col
+                a.developer__link(href="https://gk-sneg.com/" target="_blank")
+                  svg(width="35", height="19")
+                    use(xlink:href="img/symbols.svg#icon-sneg")
+          p.mb-menu__copyright © 2019, АО ТК «Гранд Сервис Экспресс»
