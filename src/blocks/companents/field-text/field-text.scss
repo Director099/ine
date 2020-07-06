@@ -22,7 +22,15 @@ $border-radius:               rem(3px) !default;
   //margin-bottom: 1rem;
 
   &__name {
+    display: inline-block;
     //@include field-name;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+
+    span {
+      color: #EB5757;
+    }
   }
 
   &__input-wrap {
@@ -79,7 +87,7 @@ $border-radius:               rem(3px) !default;
       $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
 
       height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      min-height: 98px;
       resize: vertical;
     }
   }
@@ -117,4 +125,8 @@ $border-radius:               rem(3px) !default;
 
 .field-text__input--tr {
   background-color: transparent;
+}
+
+.modal .fancybox-close-small {
+  display: none;
 }

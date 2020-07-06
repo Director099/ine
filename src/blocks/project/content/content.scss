@@ -190,3 +190,11 @@
 .content__mb-btn {
   margin-bottom: 10px;
 }
+
+.content__filter-block {
+  margin-top: 10px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 30px;
+  }
+}

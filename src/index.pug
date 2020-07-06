@@ -38,31 +38,32 @@ block content
         header.content__header.content__header--c-main.content__header--center
           h1.title-h.content__title Рекомендуем ознакомиться
           p.subtitle.content__subtitle Мы подготовили и собрали наиболее востребуемые товары, новинки и акции
-        +tab-filter
-          +tab-filter-item('Всё', 'all', true)
-          +tab-filter-item('Советуем', 'advice')
-          +tab-filter-item('Новинки', 'new')
-          +tab-filter-item('Акции', 'sale')
-        .content__row.content__row--xs-6.content__row--col-mb
-          .content__col.content__col--6(data-filter="advice")
-            +product()
-          .content__col.content__col--6(data-filter="new")
-            +product()
-          .content__col.content__col--6(data-filter="advice")
-            +product()
-          .content__col.content__col--6(data-filter="sale")
-            +product()
-          .content__col.content__col--6(data-filter="sale")
-            +product()
-          .content__col.content__col--6(data-filter="sale")
-            +product()
-          //.content__col.content__col--6(data-filter="advice")
-          //  +product()
-          //.content__col.content__col--6(data-filter="advice")
-          //  +product()
-          //.content__col.content__col--6(data-filter="sale")
-          //  +product()
-        button.btn.btn--lighten.btn--s-big.content__btn-more Показать больше
+        .filter-group
+          +tab-filter
+            +tab-filter-item('Всё', 'all', true)
+            +tab-filter-item('Советуем', 'advice')
+            +tab-filter-item('Новинки', 'new')
+            +tab-filter-item('Акции', 'sale')
+          .content__row.content__row--xs-6.content__row--col-mb.count-hide
+            .content__col.content__col--6(data-filter="advice")
+              +product()
+            .content__col.content__col--6(data-filter="new")
+              +product()
+            .content__col.content__col--6(data-filter="advice")
+              +product()
+            .content__col.content__col--6(data-filter="sale")
+              +product()
+            .content__col.content__col--6(data-filter="sale")
+              +product()
+            .content__col.content__col--6(data-filter="sale")
+              +product()
+            .content__col.content__col--6(data-filter="advice")
+              +product()
+            .content__col.content__col--6(data-filter="advice")
+              +product()
+            .content__col.content__col--6(data-filter="sale")
+              +product()
+          button.btn.btn--lighten.btn--s-big.content__btn-more.js-show-more Показать больше
     .content.content--news.content--xs-pb0
       .container
         header.content__header.content__header--c-main.content__header--xs-center

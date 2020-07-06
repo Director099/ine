@@ -1,15 +1,30 @@
 'use strict';
 
-// Плавный скол с навигации
+/**
+ * @description Отключил граб
+ */
 
-/* $(".scrollto > a").click(function () {
-  var elementClick = $(this).attr("href")
-  var destination = $(elementClick).offset().top;
-  jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-  return false;
-}); */
+(function () {
+  $('[data-fancybox]').fancybox({
+    touch: false
+  })
+})();
 
-// Плавный скол с навигации
+
+/**
+ * @description Маска телефона
+ */
+
+(function () {
+  new Inputmask({
+    mask: "8 (999) 999 99 99",
+    showMaskOnHover: false,
+  }).mask(document.querySelectorAll("[type='tel']"));
+})();
+
+/**
+ * @description Меню
+ */
 
 (function () {
   $('.js-menu').on('click', function () {
@@ -51,6 +66,9 @@
  */
 
 (function () {
+  const btnFilter = $('[data-btn-filter]');
+  const blockFilter = $("[data-filter]");
+
   let swiper = new Swiper('.js-category', {
     slidesPerView: 'auto',
     spaceBetween: 10,
@@ -64,6 +82,27 @@
         spaceBetween: 30,
       }
     }
+  });
+
+  /**
+   * @description таб фильтр
+   */
+
+  btnFilter.on("click", function () {
+    const parents = $(this).parents('.filter-group');
+    parents.find(btnFilter).removeClass("active");
+    $(this).addClass("active");
+    parents.find('[data-filter]').attr("hidden", "");
+
+    parents.find(".tab-filter__btn.active").each(function(){
+      if ($(this).data("btn-filter") === 'all') {
+        parents.find(blockFilter).removeAttr("hidden");
+        swiper.update();
+      } else {
+        $('[data-filter="'+$(this).data("btn-filter")+'"]').removeAttr("hidden");
+        swiper.update();
+      }
+    });
   });
 })();
 
@@ -87,27 +126,68 @@
 })();
 
 /**
- * @description таб фильтр
+ * @description Range
  */
 
 (function () {
-  const btnFilter = $('[data-btn-filter]');
-  const blockFilter = $("[data-filter]");
+  var slider = document.getElementById('slider-range');
+  var input0 = document.getElementById('input-range-0');
+  var input1 = document.getElementById('input-range-1');
+  var inputs = [input0, input1];
 
-  btnFilter.on("click", function () {
-    btnFilter.removeClass("active");
-    $(this).addClass("active");
-    $('[data-filter]').attr("hidden", "");
-
-    $(".tab-filter__btn.active").each(function(){
-      if ($(this).data("btn-filter") === 'all') {
-        blockFilter.removeAttr("hidden");
-      } else {
-        $('[data-filter="'+$(this).data("btn-filter")+'"]').removeAttr("hidden");
+  if (slider) {
+     noUiSlider.create(slider, {
+      start: [0, 5000],
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 10000
       }
     });
-  });
+
+    slider.noUiSlider.on('update', function (values, handle) {
+      inputs[handle].value = Math.round(values[handle]);
+    });
+
+    inputs.forEach(function (input, handle) {
+      input.addEventListener('change', function () {
+        slider.noUiSlider.setHandle(handle, this.value);
+      });
+    });
+  }
 })();
+
+/**
+ * @description Ввод счетчика колличества
+ */
+
+(function () {
+  var fields = document.querySelectorAll( '.field-num' );
+  if(fields.length) {
+    Array.prototype.forEach.call( fields, function( field ) {
+      const input = field.querySelector('.field-num__input');
+      const valueMin = input.getAttribute('min') ? +input.getAttribute('min') : -Infinity;
+      const valueMax = input.getAttribute('max') ? +input.getAttribute('max') : Infinity;
+      const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
+      field.addEventListener('click', function(event){
+        if(event.target.classList.contains('field-num__btn') && !input.getAttribute('disabled')) {
+          let num = parseInt(input.value);
+          if(isNaN(num)) num = 0;
+          if(event.target.classList.contains('field-num__btn--plus')) {
+            if (num < valueMax) input.value = num + valueStep;
+          }
+          if(event.target.classList.contains('field-num__btn--minus')) {
+            if (num > valueMin) input.value = num - valueStep;
+          }
+        }
+      });
+    });
+  }
+})();
+
+/**
+ * @description Друпдаун
+ */
 
 +function ($) {
   'use strict';
@@ -288,3 +368,32 @@
     .on('keydown.nth.dropdown.data-api', '.dropdown__menu', Dropdown.prototype.keydown)
 
 }(jQuery);
+
+/**
+ * @description Добавление в корзину
+ */
+
+(function () {
+  $('.js-add-basket > .btn').on('click', function() {
+    $(this).addClass('d-none');
+    $(this).next().removeClass('d-none');
+  })
+})();
+
+/**
+ * @description Читать далее
+ */
+
+(function () {
+  $('.js-reed-more').on('click', function() {
+    $(this).prev().removeClass('product-card__desc--clump');
+    $(this).addClass('d-none');
+  })
+})();
+
+(function () {
+  $('.js-show-more').on('click', function() {
+    $(this).addClass('d-none');
+    $(this).parents('.filter-group').find('.count-hide').removeClass('count-hide');
+  })
+})();

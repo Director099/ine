@@ -29,9 +29,9 @@ mixin dropdown(text, id, mods)
     }
 
   if(typeof(id) !== 'undefined' && id)
-    span.dropdown(class=allMods)&attributes(attributes)
+    .dropdown(class=allMods)&attributes(attributes)
       button.btn.dropdown__toggler(id=id, type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')!= text
-      span.dropdown__menu(aria-labelledby=id)
+      .dropdown__menu(aria-labelledby=id)
         block
   else
     span Укажите уникальный #[code id] этого выпадающего элемента

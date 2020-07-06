@@ -48,6 +48,12 @@
   outline: none;
 }
 
+@media (max-width: $screen-lg - 1) {
+  ::-webkit-scrollbar {
+    display:none
+  }
+}
+
 html {
   font-family: sans-serif; // 2
   line-height: 1.15; // 3

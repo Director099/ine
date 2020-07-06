@@ -1,50 +1,51 @@
 mixin js-category
-  +tab-filter
-    +tab-filter-item('Всё', 'all', true)
-    +tab-filter-item('Все для пряжи', 'yarn')
-    +tab-filter-item('Швейная фурнитура', 'hardware')
-    +tab-filter-item('Товары для рукоделия', 'needlework')
-  .swiper-container-relative
-    .swiper-container.js-category
-      .swiper-wrapper
-        .swiper-slide(data-filter="yarn")
-          +category({
-              img: 1,
-              title: 'Пряжа'
-          })
-        .swiper-slide(data-filter="yarn")
-          +category({
-              img: 2,
-              title: 'Для вязания'
-          })
-        .swiper-slide(data-filter="yarn")
-          +category({
-              img: 3,
-              title: 'Журналы'
-          })
-        .swiper-slide(data-filter="hardware")
-          +category({
-              img: 4,
-              title: 'Иглы <br> и булавки'
-          })
-        .swiper-slide(data-filter="hardware")
-          +category({
-              img: 5,
-              title: 'Материалы'
-          })
-        .swiper-slide(data-filter="needlework")
-          +category({
-              img: 6,
-              title: 'Алмазная <br> мозаика'
-          })
-        .swiper-slide(data-filter="needlework")
-          +category({
-              img: 1,
-              title: 'Пряжа'
-          })
-    button.swiper-button-circle.swiper-button-circle--prev(type="button")
-      svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-        path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-    button.swiper-button-circle.swiper-button-circle--next(type="button")
-      svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-        path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+  .filter-group
+    +tab-filter
+      +tab-filter-item('Всё', 'all', true)
+      +tab-filter-item('Все для пряжи', 'yarn')
+      +tab-filter-item('Швейная фурнитура', 'hardware')
+      +tab-filter-item('Товары для рукоделия', 'needlework')
+    .swiper-container-relative
+      .swiper-container.js-category
+        .swiper-wrapper
+          .swiper-slide(data-filter="yarn")
+            +category({
+                img: 1,
+                title: 'Пряжа'
+            })
+          .swiper-slide(data-filter="yarn")
+            +category({
+                img: 2,
+                title: 'Для вязания'
+            })
+          .swiper-slide(data-filter="yarn")
+            +category({
+                img: 3,
+                title: 'Журналы'
+            })
+          .swiper-slide(data-filter="hardware")
+            +category({
+                img: 4,
+                title: 'Иглы <br> и булавки'
+            })
+          .swiper-slide(data-filter="hardware")
+            +category({
+                img: 5,
+                title: 'Материалы'
+            })
+          .swiper-slide(data-filter="needlework")
+            +category({
+                img: 6,
+                title: 'Алмазная <br> мозаика'
+            })
+          .swiper-slide(data-filter="needlework")
+            +category({
+                img: 1,
+                title: 'Пряжа'
+            })
+      button.swiper-button-circle.swiper-button-circle--prev(type="button")
+        svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+      button.swiper-button-circle.swiper-button-circle--next(type="button")
+        svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")

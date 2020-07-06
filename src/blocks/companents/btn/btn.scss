@@ -94,6 +94,11 @@ $border-radius:               5px !default;
     border: 1px solid $white;
   }
 
+  &--white-b {
+    background-color: $white;
+    border: 1px solid #DFE2ED;
+  }
+
    &--main {
      color: #fff;
      background-color: #566DFB;

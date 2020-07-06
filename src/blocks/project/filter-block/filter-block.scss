@@ -1,0 +1,80 @@
+.filter-block {
+  @media (min-width: $screen-xl) {
+    padding: 16px 15px;
+    background: linear-gradient(180deg, #FEFEFE 0%, #FAFAFA 100%);
+    box-shadow: 10px 10px 7px rgba(221, 226, 238, 0.12), -10px -10px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+}
+
+.filter-block__row {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-xl) {
+    &--xl-row {
+      flex-direction: row;
+    }
+
+    &--xl-sb {
+      justify-content: space-between;
+    }
+  }
+}
+
+.filter-block__dropdown {
+  margin-bottom: 10px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 0;
+  }
+}
+
+.filter-block__dropdown > .btn {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  //padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  width: 100%;
+  border: 1px solid $white;
+  background-color: $white;
+  text-align: left;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+    text-align: center;
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.filter-block__dropdown .dropdown__menu {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+
+  @media (min-width: $screen-xl) {
+    margin-top: 28px;
+    width: auto;
+    max-width: inherit;
+  }
+}
+
+.filter-block__dropdown.dropdown--right .dropdown__menu {
+  @media (min-width: $screen-xl) {
+    right: -15px;
+  }
+}
+
+
+.filter-block__dropdown.dropdown--left .dropdown__menu {
+  @media (min-width: $screen-xl) {
+    left: -15px;
+  }
+}
+

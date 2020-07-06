@@ -42,78 +42,96 @@ block content
             a.btn.btn--r-middle.btn--white(href="#") Kartopu
           .content__col.content__col--auto
             a.btn.btn--r-middle.btn--white(href="#") Knitka
-        .filter-block
-          +dropdown('Фильтр по параметрам', 'drop-01')
-            form.filter
-              .filter__group
-                strong.filter__title Цена
-                .filter__fieldset
-
-              .filter__group
-                strong.filter__title Состав
-                .filter__fieldset
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-              .filter__group
-                strong.filter__title Цвет
-                .filter__fieldset
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-                  +field-checkbox([
-                      {
-                          title: 'Чекбокс0',
-                          attrs: {
-                              name: 'check0',
-                          }
-                      },
-                  ])
-              .filter__group
-                button.btn.btn--main Показыть
-                button.btn(type="reset") Сбросить
-          +dropdown('По популярности', 'drop-02')
-            .menu
-              span.menu__item
-                a.menu__link(href='') Пункт списка
-              span.menu__item
-                a.menu__link(href='') Пункт меню весьма длинный
-              span.menu__item
-                a.menu__link(href='') Второй пункт
+        .filter-block.content__filter-block
+          .filter-block__row.filter-block__row--xl-sb.filter-block__row--xl-row
+            +dropdown('Фильтр по параметрам', 'drop-01', 'left filter').filter-block__dropdown
+              form.filter
+                .filter__group
+                  strong.filter__title Цена
+                  .filter__fieldset
+                    .filter__field-row
+                      input(type="number" value="0" id="input-range-0" required="")
+                      input(type="number" value="1000" id="input-range-1" required="")
+                    .range(id="slider-range")
+                .filter__group
+                  strong.filter__title Состав
+                  .filter__fieldset
+                    +field-checkbox([
+                        {
+                            title: 'Шерсть',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Вискоза',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Лен',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                .filter__group
+                  strong.filter__title Цвет
+                  .filter__fieldset
+                    +field-checkbox([
+                        {
+                            mods: 'white',
+                            title: 'Белый',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            mods: 'yellow',
+                            title: 'Желтый',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            mods: 'green',
+                            title: 'Зеленый',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            mods: 'gradient',
+                            title: 'Цветной',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+                .filter__group
+                  button.btn.btn--main.btn--s-middle.filter__btn Показыть
+                  button.btn.btn--s-middle.btn--white-b.filter__btn(type="reset") Сбросить
+            +dropdown('По популярности', 'drop-02', 'right').filter-block__dropdown
+              ul.sort
+                li.sort__item
+                  a.sort__link.sort__link--active(href='') По популярности
+                li.sort__item
+                  a.sort__link(href='') По новизне
+                li.sort__item
+                  a.sort__link(href='') По убыванию цены
+                li.sort__item
+                  a.sort__link(href='') По возрастанию цены
         .content__row.content__row--xs-6.content__row--col-mb
           .content__col.content__col--6
             +product()
