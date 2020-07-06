@@ -59,6 +59,16 @@
 .content__row {
   @include row();
 
+  &--10 {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .content__col {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
   @media (max-width: $screen-xl - 1) {
     &--xs-6 {
       margin-left: -5px;
@@ -91,6 +101,10 @@
 
 .content__col {
   @include make-col(12);
+
+  &--auto {
+    flex-basis: auto;
+  }
 
   &--6 {
     @include col(xs, 6, 12, 10px);
@@ -171,4 +185,8 @@
     display: inline-block;
     text-decoration: none;
   }
+}
+
+.content__mb-btn {
+  margin-bottom: 10px;
 }

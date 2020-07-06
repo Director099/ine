@@ -126,5 +126,10 @@ $border-radius:               5px !default;
     border-radius: 50px;
     padding-top: 6px;
     padding-bottom: 6px;
+
+    &.active {
+      border-color: #566dfb;
+      color: #566dfb;;
+    }
   }
 }

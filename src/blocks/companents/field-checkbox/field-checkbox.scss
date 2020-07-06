@@ -118,6 +118,6 @@ $border-radius:               rem(3px) !default;
   }
 
   &__help-text {
-    @include field-help-text;
+    //@include field-help-text;
   }
 }

@@ -22,6 +22,8 @@
 @import "../blocks/companents/table/table";
 @import "../blocks/companents/display/display";
 @import "../blocks/companents/close/close";
+@import "../blocks/companents/dropdown/dropdown";
+@import "../blocks/companents/field-checkbox/field-checkbox";
 
 @import "../blocks/project/swiper/swiper";
 @import "../blocks/project/tab-filter/tab-filter";
@@ -40,6 +42,7 @@
 @import "../blocks/project/phone/phone";
 @import "../blocks/project/basket/basket";
 @import "../blocks/project/mb-menu/mb-menu";
+@import "../blocks/project/filter/filter";
 
 .text-danger {
   color: $color-danger;

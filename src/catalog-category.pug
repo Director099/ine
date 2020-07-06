@@ -18,7 +18,102 @@ block content
     .content
       .container
         header.content__header.content__header--c-main
-          h2.title-h.content__title Каталог товаров
+          h2.title-h.content__title Пряжа
+        .content__row.content__row--10
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white.active(href="#") Alize
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Nako
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Magic
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Vita
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Vita Cotton
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Color City
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") YarnArt
+          .content__col.content__col--auto.content__mb-btn
+            a.btn.btn--r-middle.btn--white(href="#") Adelia
+          .content__col.content__col--auto
+            a.btn.btn--r-middle.btn--white(href="#") Nazar
+          .content__col.content__col--auto
+            a.btn.btn--r-middle.btn--white(href="#") Kartopu
+          .content__col.content__col--auto
+            a.btn.btn--r-middle.btn--white(href="#") Knitka
+        .filter-block
+          +dropdown('Фильтр по параметрам', 'drop-01')
+            form.filter
+              .filter__group
+                strong.filter__title Цена
+                .filter__fieldset
+
+              .filter__group
+                strong.filter__title Состав
+                .filter__fieldset
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+              .filter__group
+                strong.filter__title Цвет
+                .filter__fieldset
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+                  +field-checkbox([
+                      {
+                          title: 'Чекбокс0',
+                          attrs: {
+                              name: 'check0',
+                          }
+                      },
+                  ])
+              .filter__group
+                button.btn.btn--main Показыть
+                button.btn(type="reset") Сбросить
+          +dropdown('По популярности', 'drop-02')
+            .menu
+              span.menu__item
+                a.menu__link(href='') Пункт списка
+              span.menu__item
+                a.menu__link(href='') Пункт меню весьма длинный
+              span.menu__item
+                a.menu__link(href='') Второй пункт
         .content__row.content__row--xs-6.content__row--col-mb
           .content__col.content__col--6
             +product()
