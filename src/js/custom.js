@@ -391,9 +391,33 @@
   })
 })();
 
+/**
+ * @description Раскрыть больше блоков
+ */
 (function () {
   $('.js-show-more').on('click', function() {
     $(this).addClass('d-none');
     $(this).parents('.filter-group').find('.count-hide').removeClass('count-hide');
   })
+})();
+
+/**
+ * @description Коллапс
+ */
+
+(function () {
+  $('.js-collapse').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
+})();
+
+/**
+ * @description Открыть каталог
+ */
+
+(function () {
+  $('.js-open-catalog').on('click', function() {
+    $('.catalog').toggleClass('active');
+  });
 })();

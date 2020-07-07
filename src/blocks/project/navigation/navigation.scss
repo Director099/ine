@@ -11,12 +11,33 @@
 .navigation__item {
   flex-basis: auto;
   padding: 8.5px 17.5px;
+
+  @media (max-width: $screen-xl - 1) {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #DFE2ED;
+  }
 }
 
 .navigation__link {
+  display: inline-block;
   text-decoration: none;
   color: $text-color;
   line-height: 16px;
+
+  .burger {
+    margin-right: 15px;
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    padding: 16px 15px;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: rgba(#9296AA, 0.1);
+  }
 }
 
 .navigation__burger-sub {

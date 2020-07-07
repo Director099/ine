@@ -1,3 +1,4 @@
+<!--include ../blocks/companents/field-num/field-num.pug-->
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
@@ -81,7 +82,7 @@
                                 <div class="page-header__row page-header__row--sb">
                                     <nav class="navigation">
                                         <ul class="navigation__list">
-                                            <li class="navigation__item"><a class="navigation__link"><span class="burger" aria-label="Каталог"><span></span></span><span>Каталог</span></a></li>
+                                            <li class="navigation__item"><a class="navigation__link js-open-catalog"><span class="burger" aria-label="Каталог"><span></span></span><span>Каталог</span></a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>
@@ -307,22 +308,29 @@
             <footer class="page-footer">
                 <div class="container">
                     <div class="page-footer__content">
-                        <div class="page-footer__row">
-                            <div class="page-footer__col page-footer__col--xl-4">
-                                <p class="copyright">2013 ©</p>
-                                <p class="copyright">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»</p><a class="develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
-                            </div>
+                        <div class="page-footer__row page-footer__row--xl-reverse">
                             <div class="page-footer__col page-footer__col--xl-8">
-                                <div class="page-footer__">
-                                    <div class="page-footer__info">
-                                        <div class="phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
-                                            <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
-                                        </div><a href="mailto:baimur@yandex.ru">baimur@yandex.ru</a>
+                                <section class="page-footer__commun">
+                                    <h3 class="page-footer__title-info">Контакты</h3>
+                                    <div class="page-footer__commun-row">
+                                        <div class="page-footer__info">
+                                            <div class="phone page-footer__phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow phone__wrap--white" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
+                                                <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                            </div><a class="page-footer__link" href="mailto:baimur@yandex.ru">baimur@yandex.ru</a>
+                                        </div>
+                                        <div class="page-footer__address">
+                                            <p>Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)</p>
+                                            <p>Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)</p>
+                                        </div>
                                     </div>
-                                    <div class="page-footer__address">
-                                        <p>Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)</p>
-                                        <p>Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)</p>
-                                    </div>
+                                </section>
+                            </div>
+                            <div class="page-footer__col page-footer__col--xl-4">
+                                <div class="page-footer__copyright">
+                                    <div class="copyright">
+                                        <p>2013 ©</p>
+                                        <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»</p>
+                                    </div><a class="develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
                                 </div>
                             </div>
                         </div>
@@ -372,43 +380,104 @@
                 <div class="container">
                     <nav class="navigation">
                         <ul class="navigation__list">
-                            <li class="navigation__item"><a class="navigation__link" href="train-carriage.html">Поезда и вагоны</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="bonus.html">Льготы и бонусы</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="return-ticket.html">Возврат билетов</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="partner.html">Партнерам</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="about.html">О компании</a></li>
+                            <li class="navigation__item"><span class="navigation__link">Каталог</span>
+                                <div class="product-list">
+                                    <h3 class="product-list__title">Все для пряжи</h3>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Пряжа</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Журналы для вязания</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                            <li class="product-list__item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-list">
+                                    <h3 class="product-list__title">Швейная <br/> фурнитура</h3>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Иглы и булавки</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Ручные иглы</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для бытовой машинки</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для промышленной машинки</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Булавки</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Игольницы и наборы</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Материалы</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-list">
+                                    <h3 class="product-list__title">Товары для рукоделия</h3>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Алмазная мозаика</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Полная выкладка</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Частичная выкладка</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Раскройки по номерам</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-list__subitem">
+                                        <h4 class="product-list__subtitle js-collapse">Схемы для вышивки</h4>
+                                        <ul class="product-list__list">
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="template-page.html">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="mb-menu__documents">
+            <footer class="page-footer page-footer--lighten mb-menu__footer">
                 <div class="container">
-                    <ul class="mb-menu__documents-list">
-                        <li class="mb-menu__documents-item"><a class="mb-menu__documents-link" href="#offer" data-fancybox="">Обработка персональных данных</a></li>
-                        <li class="mb-menu__documents-item"><a class="mb-menu__documents-link" href="#confidition" data-fancybox="">Политика конфиденциальности</a></li>
-                    </ul>
-                </div>
-            </div>
-            <footer class="mb-menu__footer">
-                <div class="container">
-                    <div class="mb-menu__contact">
-                        <p class="mb-menu__address"><span>129075, г.Москва</span> ул. Шереметьевская, д. 85, стр.</p>
-                        <div class="mb-menu__contact-link"><a href="tel:88007755453">8 800 775 54 53</a></div>
-                        <div class="mb-menu__contact-link"><a href="mailto:bilet@gse-online.ru">bilet@gse-online.ru</a></div>
-                    </div>
-                    <div class="developer mb-menu__developer">
-                        <div class="developer__row">
-                            <div class="developer__col"><a class="developer__link" href="https://www.aidem.ru/" target="_blank"><span>Developed by</span>
-                                    <svg width="46" height="17">
-                                        <use xlink:href="img/symbols.svg#icon-aidem"></use>
-                                    </svg></a></div>
-                            <div class="developer__col"><a class="developer__link" href="https://gk-sneg.com/" target="_blank">
-                                    <svg width="35" height="19">
-                                        <use xlink:href="img/symbols.svg#icon-sneg"></use>
-                                    </svg></a></div>
+                    <div class="page-footer__content">
+                        <div class="page-footer__row page-footer__row--xl-reverse">
+                            <div class="page-footer__col page-footer__col--xl-8">
+                                <section class="page-footer__commun">
+                                    <h3 class="page-footer__title-info">Контакты</h3>
+                                    <div class="page-footer__commun-row">
+                                        <div class="page-footer__info">
+                                            <div class="phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
+                                                <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                            </div><a class="page-footer__link" href="mailto:baimur@yandex.ru">baimur@yandex.ru</a>
+                                        </div>
+                                        <div class="page-footer__address">
+                                            <p>Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)</p>
+                                            <p>Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     </div>
-                    <p class="mb-menu__copyright">© 2019, АО ТК «Гранд Сервис Экспресс»</p>
                 </div>
             </footer>
         </div>

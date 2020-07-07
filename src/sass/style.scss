@@ -24,7 +24,7 @@
 @import "../blocks/companents/close/close";
 @import "../blocks/companents/dropdown/dropdown";
 @import "../blocks/companents/field-checkbox/field-checkbox";
-@import "../blocks/companents/field-num/field-num";
+//@import "../blocks/companents/field-num/field-num";
 @import "../blocks/companents/modal/modal";
 
 
@@ -52,6 +52,12 @@
 @import "../blocks/project/add-basket/add-basket";
 @import "../blocks/project/catalog/catalog";
 @import "../blocks/project/product-list/product-list";
+
+.fancybox-active {
+  @media (max-width: $screen-xl - 1) {
+    overflow: hidden;
+  }
+}
 
 .text-danger {
   color: $color-danger;
@@ -113,4 +119,15 @@
 
 .count-hide .content__col:nth-child(n+7) {
   display: none;
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba($white, 0.5);
+  margin-bottom: 28px;
+
+  @media (min-width: $screen-xl) {
+    max-width: 260px;
+  }
 }

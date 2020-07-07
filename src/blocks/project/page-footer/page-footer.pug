@@ -2,17 +2,21 @@ mixin page-footer()
   footer.page-footer
     .container
       .page-footer__content
-        .page-footer__row
-          .page-footer__col.page-footer__col--xl-4
-            p.copyright 2013 ©
-            p.copyright Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»
-            a.develop(href="https://pplans.ru/" target="_blank")
-              img(src="img/icon/develop.svg", alt="Разработка сайтов. Продвижение. Брендинг | People Plans")
+        .page-footer__row.page-footer__row--xl-reverse
           .page-footer__col.page-footer__col--xl-8
-            .page-footer__
-              .page-footer__info
-                +phone()
-                a(href="mailto:baimur@yandex.ru") baimur@yandex.ru
-              .page-footer__address
-                p Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)
-                p Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)
+            section.page-footer__commun
+              h3.page-footer__title-info Контакты
+              .page-footer__commun-row
+                .page-footer__info
+                  +phone('phone__wrap--white').page-footer__phone
+                  a.page-footer__link(href="mailto:baimur@yandex.ru") baimur@yandex.ru
+                .page-footer__address
+                  p Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)
+                  p Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)
+          .page-footer__col.page-footer__col--xl-4
+            .page-footer__copyright
+              .copyright
+                p 2013 ©
+                p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»
+              a.develop(href="https://pplans.ru/" target="_blank")
+                img(src="img/icon/develop.svg", alt="Разработка сайтов. Продвижение. Брендинг | People Plans")

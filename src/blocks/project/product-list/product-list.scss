@@ -30,7 +30,8 @@
     transition: $time;
   }
 
-  &--active {
+  &.active::after {
+    top: 2px;
     transform: rotate(45deg);
   }
 }

@@ -17,30 +17,55 @@
   display: block;
   color: inherit;
   text-decoration: none;
-  padding: 10px 25px 10px 14px;
+  padding: 5px 14px;
   text-align: center;
-  border-bottom: 1px solid #DFE2ED;
+
+  @media (min-width: $screen-xl) {
+    padding: 10px 25px 10px 14px;
+  }
+
+  @media (min-width: $screen-xl) {
+    &--pd {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
   &:last-of-type {
     border-bottom: 0;
   }
 
-  &--pd {
-    padding-top: 0;
-    padding-bottom: 0;
+  @media (min-width: $screen-xl) {
+    border-bottom: 1px solid #DFE2ED;
+
+    &--arrow::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 13px;
+      width: 5px;
+      height: 5px;
+      transition: $time;
+      transform: rotate(45deg);
+      border-bottom: 1px solid #3E5268;
+      border-right: 1px solid #3E5268;
+    }
   }
 
-  &--arrow::after {
-    content: "";
-    position: absolute;
-    top: 4px;
-    right: 13px;
-    width: 5px;
-    height: 5px;
-    transition: $time;
-    transform: rotate(45deg);
-    border-bottom: 1px solid #3E5268;
-    border-right: 1px solid #3E5268;
+  &--white {
+    @media (min-width: $screen-xl) {
+      &::after {
+        border-color: $white;
+      }
+    }
+
+    .phone__number {
+      color: $white;
+    }
+
+    .phone__text {
+      color: rgba($white, 0.5);
+    }
   }
 }
 
@@ -48,24 +73,42 @@
   display: block;
   color: #3A426D;
   opacity: 0.5;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 11px;
+  line-height: 13px;
   margin-top: 3px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .phone__list {
-  position: absolute;
-  top: 43px;
-  left: 0;
-  background-color: $white;
-  box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
-  border-radius: 5px;
-  transition: $time;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
+  margin-bottom: 9px;
+
+  @media (min-width: $screen-xl) {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    background-color: $white;
+    box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
+    border-radius: 5px;
+    margin-bottom: 0;
+
+    transition: $time;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+
+    min-width: 169px;
+  }
 }
 
 .phone__number {
+  color: $text-color;
   line-height: 16px;
+
+  @media (max-width: $screen-xl - 1) {
+    font-size: 14px;
+  }
 }
