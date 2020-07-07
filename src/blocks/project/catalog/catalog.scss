@@ -1,0 +1,22 @@
+.catalog {
+  position: absolute;
+  top: 67px;
+  left: 0;
+  right: 0;
+  padding: 51px 52px 58px;
+  background: #F4F5F9;
+  box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
+  border-radius: 5px;
+}
+
+.catalog__row {
+  @include row();
+}
+
+.catalog__col {
+  @include make-col(12);
+
+  &--xl-2 {
+    @include col(xl, 2, 12);
+  }
+}

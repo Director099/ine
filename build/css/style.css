@@ -955,6 +955,9 @@ input:checked ~ .field-checkbox__name-text:after {
 .page-header__menu {
     margin-right: 25px;
 }
+.page-header__rel {
+    position: relative;
+}
 .page-footer {
     padding-top: 64px;
     padding-bottom: 51px;
@@ -1653,6 +1656,84 @@ input:checked ~ .field-checkbox__name-text:after {
     padding: 17px 30px;
     border-bottom: 1px solid #dfe2ed;
 }
+.catalog {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    right: 0;
+    padding: 51px 52px 58px;
+    background: #f4f5f9;
+    box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
+    border-radius: 5px;
+}
+.catalog__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.catalog__row > * {
+    flex-basis: 100%;
+}
+.catalog__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.product-list__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+.product-list__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+.product-list__subtitle {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+}
+.product-list__subtitle::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -15px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #3a426d;
+    border-bottom: 1px solid #3a426d;
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+.product-list__subtitle--active {
+    transform: rotate(45deg);
+}
+.product-list__subitem {
+    margin-bottom: 10px;
+}
+.product-list__subitem:last-child {
+    margin-bottom: 0;
+}
+.product-list__item {
+    margin-bottom: 2px;
+}
+.product-list__item:last-child {
+    margin-bottom: 0;
+}
+.product-list__link {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #3a426d;
+}
 .text-danger {
     color: #d8544f;
 }
@@ -1989,6 +2070,12 @@ input:checked ~ .field-checkbox__name-text:after {
     }
     .product-preview__img {
         height: 161px;
+    }
+    .catalog__col--xl-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 @media (min-width: none) {

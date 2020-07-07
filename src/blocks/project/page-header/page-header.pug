@@ -35,29 +35,140 @@ mixin page-header(mod)
                   p 5 позиций на 10 860 ₽
     .page-header__bottom.d-none.d-xl-block(class=`${!mod ? 'page-header__bottom--line' : ''}`)
       .container
-        .container__left
-          .page-header__row.page-header__row--sb
-            nav.navigation
-              +burger('Показать ничто').navigation__burger-sub
-              ul.navigation__list
-                li.navigation__item
-                  a.navigation__link(href="catalog.html") Каталог
-                li.navigation__item
-                  a.navigation__link(href="template-page.html") О компании
-                li.navigation__item
-                  a.navigation__link(href="template-page.html") Условия работы
-                li.navigation__item
-                  a.navigation__link(href="news.html") Новости
-                li.navigation__item
-                  a.navigation__link(href="template-page.html") Контакты
-            form.form.page-header__form
-              +field-text({
-                attrs: {
-                  placeholder: 'Искать',
-                  name: 'search',
-                  class: 'field-text__input--radius field-text__input--tr field-text__input--btn-r'
-                }
-              })
-                button.field-text__btn
-                  svg(width="15", height="15")
-                    use(xlink:href="img/symbols.svg#icon-serch")
+        .page-header__rel
+          .container__left
+            .page-header__row.page-header__row--sb
+              nav.navigation
+                ul.navigation__list
+                  li.navigation__item
+                    a.navigation__link()
+                      span.burger(aria-label="Каталог")
+                        span
+                      span Каталог
+                  li.navigation__item
+                    a.navigation__link(href="template-page.html") О компании
+                  li.navigation__item
+                    a.navigation__link(href="template-page.html") Условия работы
+                  li.navigation__item
+                    a.navigation__link(href="news.html") Новости
+                  li.navigation__item
+                    a.navigation__link(href="template-page.html") Контакты
+              form.form.page-header__form
+                +field-text({
+                  attrs: {
+                    placeholder: 'Искать',
+                    name: 'search',
+                    class: 'field-text__input--radius field-text__input--tr field-text__input--btn-r'
+                  }
+                })
+                  button.field-text__btn
+                    svg(width="15", height="15")
+                      use(xlink:href="img/symbols.svg#icon-serch")
+          .catalog
+            .catalog__row
+              .catalog__col.catalog__col--xl-2
+                .product-list
+                  h3.product-list__title Все для пряжи
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Пряжа
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Alize (Ализе)
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Magic
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nako
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Vita
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Vita Cotton
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Color City
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") YarnArt
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Adelia
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nazar
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Kartopu
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Knitka
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Журналы для вязания
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Alize (Ализе)
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Magic
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nako
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Vita
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Vita Cotton
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Color City
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") YarnArt
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Adelia
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nazar
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Kartopu
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Knitka
+              .catalog__col.catalog__col--xl-2
+                .product-list
+                  h3.product-list__title Швейная #[br] фурнитура
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Иглы и булавки
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Ручные иглы
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Для бытовой машинки
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Для промышленной машинки
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Булавки
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Игольницы и наборы
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Материалы
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Alize (Ализе)
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Magic
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nako
+              .catalog__col.catalog__col--xl-2
+                .product-list
+                  h3.product-list__title Товары для рукоделия
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Алмазная мозаика
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Полная выкладка
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Частичная выкладка
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Раскройки  по номерам
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Alize (Ализе)
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Magic
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nako
+                  .product-list__subitem
+                    h4.product-list__subtitle.js-collapse Схемы для вышивки
+                    ul.product-list__list
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Alize (Ализе)
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Magic
+                      li.product-list__item
+                        a.product-list__link(href="catalog.html") Nako
