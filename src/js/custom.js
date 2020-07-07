@@ -137,11 +137,11 @@
 
   if (slider) {
      noUiSlider.create(slider, {
-      start: [0, 5000],
+      start: [0, 100000],
       connect: true,
       range: {
         'min': 0,
-        'max': 10000
+        'max': 100000
       }
     });
 
@@ -419,5 +419,24 @@
 (function () {
   $('.js-open-catalog').on('click', function() {
     $('.catalog').toggleClass('active');
+    $(this).find('.burger').toggleClass('burger--close');
+  });
+})();
+
+
+
+/**
+ * @description Открыть шторку поиска и телефона
+ */
+
+(function () {
+  $('.js-show-phone').on('click', function() {
+    $('#phone').toggleClass('active');
+    $('#search-mobile').removeClass('active');
+  });
+
+  $('.js-show-search').on('click', function() {
+    $('#search-mobile').toggleClass('active');
+    $('#phone').removeClass('active');
   });
 })();

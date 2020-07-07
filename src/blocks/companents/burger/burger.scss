@@ -21,6 +21,7 @@ $transition-time:             0.3s !default;
   border: none;
   user-select: none;
   cursor: pointer;
+  color: $toggler-part-bg-color;
 
   > span {
     position: relative;
@@ -29,8 +30,8 @@ $transition-time:             0.3s !default;
     width: 100%;
     height: $toggler-part-height;
     font-size: 0;
-    color: transparent;
-    background: $toggler-part-bg-color;
+    //color: transparent;
+    background: currentColor;
     transition: background $transition-time $transition-time;
 
     &:before,
@@ -40,7 +41,7 @@ $transition-time:             0.3s !default;
       left: 0;
       width: 100%;
       height: $toggler-part-height;
-      background: $toggler-part-bg-color;
+      background: currentColor;
       transform-origin: 50% 50%;
       transition: top $transition-time $transition-time, transform $transition-time;
     }

@@ -85,6 +85,16 @@
   }
 }
 
+.product-preview__blur {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  filter: blur(75px);
+  z-index: -1;
+}
+
 .product-preview__price {
   display: inline-block;
   font-weight: 700;

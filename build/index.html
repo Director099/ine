@@ -1,4 +1,3 @@
-<!--include ../blocks/companents/field-num/field-num.pug-->
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
@@ -27,6 +26,21 @@
         <div class="page__content">
             <header class="page-header">
                 <div class="page-header__top">
+                    <div class="curtain" id="search-mobile">
+                        <form class="curtain__form">
+                            <input class="curtain__field" type="text" placeholder="Поиск" />
+                            <button class="btn btn--r-middle btn--main">Найти</button>
+                            <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
+                        </form>
+                    </div>
+                    <div class="curtain" id="phone">
+                        <div class="curtain__item curtain__item--row"><span class="curtain__title">Телефоны</span>
+                            <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
+                        </div>
+                        <div class="curtain__item"><a class="curtain__phone" href="tel:+7(347)246–22–58"><span class="curtain__p-number">+7 (347) 246–22–58</span><span class="curtain__p-text">Звоните с 8:00 до 18:00</span></a></div>
+                        <div class="curtain__item"><a class="curtain__phone" href="tel:+7(347)246–22–58"><span class="curtain__p-number">+7 (347) 246–22–58</span><span class="curtain__p-text">Примеание</span></a></div>
+                        <div class="curtain__item"><a class="curtain__phone" href="tel:+7(347)246–22–58"><span class="curtain__p-number">+7 (347) 246–22–58</span><span class="curtain__p-text">Примеание</span></a></div>
+                    </div>
                     <div class="container">
                         <div class="page-header__row page-header__row--sb">
                             <div class="page-header__logo">
@@ -38,7 +52,7 @@
                             </div>
                             <div class="page-header__info">
                                 <div class="d-xl-none">
-                                    <button class="icon-btn">
+                                    <button class="icon-btn js-show-phone">
                                         <svg width="22" height="22" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-phone"></use>
                                         </svg>
@@ -49,7 +63,7 @@
                                             <use xlink:href="img/symbols.svg#basket"></use>
                                         </svg><span class="icon-btn__quan">5</span></a></div>
                                 <div class="d-xl-none">
-                                    <button class="icon-btn">
+                                    <button class="icon-btn js-show-search">
                                         <svg width="20" height="20" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-serch"></use>
                                         </svg>
@@ -335,7 +349,7 @@
                             <div class="content__row content__row--xs-6 content__row--col-mb count-hide">
                                 <div class="content__col content__col--6" data-filter="advice">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -352,15 +366,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -370,7 +380,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="new">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -387,15 +397,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -405,7 +411,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="advice">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -422,15 +428,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -440,7 +442,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="sale">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -457,15 +459,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -475,7 +473,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="sale">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -492,15 +490,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -510,7 +504,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="sale">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -527,15 +521,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -545,7 +535,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="advice">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -562,15 +552,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -580,7 +566,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="advice">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -597,15 +583,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -615,7 +597,7 @@
                                 </div>
                                 <div class="content__col content__col--6" data-filter="sale">
                                     <article class="product">
-                                        <div class="product__row"><a class="product__picture" href="catalog-single.html"><img src="img/content/product-1.png" alt="Show punto batİk design" /></a>
+                                        <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
                                                 <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
                                                 <div class="product__desc d-none d-xl-block">
@@ -632,15 +614,11 @@
                                                 <div class="add-basket js-add-basket">
                                                     <button class="btn btn--main btn--r-middle">Выбрать</button>
                                                     <form class="add-basket__row d-none">
-                                                        <!--+field-num({-->
-                                                        <!--    mods: '',-->
-                                                        <!--    attrs: {-->
-                                                        <!--        name: 'quantity',-->
-                                                        <!--        max: '1000',-->
-                                                        <!--        min: '1',-->
-                                                        <!--        step: '1',-->
-                                                        <!--    }-->
-                                                        <!--}).add-basket__num-->
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
                                                         <button class="btn btn--main btn--r-middle">В корзину</button>
                                                     </form>
                                                 </div>
@@ -770,75 +748,78 @@
             <div class="mb-menu__navigation">
                 <div class="container">
                     <nav class="navigation">
+                        <div class="mb-product">
+                            <h3 class="mb-product__title js-collapse">Каталог</h3>
+                            <div class="mb-product__wrap">
+                                <h3 class="mb-product__title js-collapse">Все для пряжи</h3>
+                                <div class="mb-product__wrap">
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Пряжа</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Magic</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Журналы для вязания</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Magic</a></li>
+                                            <li class="mb-product__item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3 class="mb-product__title js-collapse">Швейная фурнитура</h3>
+                                <div class="mb-product__wrap">
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Иглы и булавки</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Ручные иглы</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Для бытовой машинки</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Для промышленной машинки</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Булавки</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Игольницы и наборы</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Материалы</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Magic</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3 class="mb-product__title js-collapse">Товары для рукоделия</h3>
+                                <div class="mb-product__wrap">
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Алмазная мозаика</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Полная выкладка</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Частичная выкладка</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Раскройки по номерам</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Magic</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-product__subitem">
+                                        <h4 class="mb-product__title js-collapse">Схемы для вышивки</h4>
+                                        <ul class="mb-product__list">
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Alize (Ализе)</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Magic</a></li>
+                                            <li class="mb-product__item"><a class="mb-product__link" href="catalog.html">Nako</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <ul class="navigation__list">
-                            <li class="navigation__item"><span class="navigation__link">Каталог</span>
-                                <div class="product-list">
-                                    <h3 class="product-list__title">Все для пряжи</h3>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Пряжа</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Журналы для вязания</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                            <li class="product-list__item"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-list">
-                                    <h3 class="product-list__title">Швейная <br/> фурнитура</h3>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Иглы и булавки</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Ручные иглы</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для бытовой машинки</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для промышленной машинки</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Булавки</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Игольницы и наборы</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Материалы</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-list">
-                                    <h3 class="product-list__title">Товары для рукоделия</h3>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Алмазная мозаика</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Полная выкладка</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Частичная выкладка</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Раскройки по номерам</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product-list__subitem">
-                                        <h4 class="product-list__subtitle js-collapse">Схемы для вышивки</h4>
-                                        <ul class="product-list__list">
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                            <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>

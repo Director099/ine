@@ -3,6 +3,7 @@ mixin product-preview(num)
     span.product-preview__number= num
     .product-preview__img
       img(src="img/content/product-1.png", alt="Изображение")
+      span.product-preview__blur(style="background-image: url('img/content/product-1.png')")
     .product-preview__wrap-hide
       strong.product-preview__price 905 ₽/#[sub упак.]
       .product-preview__quantity-group
@@ -10,13 +11,13 @@ mixin product-preview(num)
         span.text-warning Много
       .add-basket
         form.add-basket__row.add-basket__row--column
-          //+field-num({
-          //    mods: '',
-          //    attrs: {
-          //        name: 'quantity',
-          //        max: '1000',
-          //        min: '1',
-          //        step: '1',
-          //    }
-          //}).add-basket__num
+          +field-num({
+              mods: '',
+              attrs: {
+                  name: 'quantity',
+                  max: '1000',
+                  min: '1',
+                  step: '1',
+              }
+          }).add-basket__num
           button.btn.btn--main.btn--r-middle В корзину

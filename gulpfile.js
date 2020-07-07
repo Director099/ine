@@ -148,7 +148,6 @@ gulp.task('build', function (fn) {
     'copy',
     'js',
     'style',
-    'images',
     'symbols',
     'pug',
     fn

@@ -24,7 +24,7 @@
 @import "../blocks/companents/close/close";
 @import "../blocks/companents/dropdown/dropdown";
 @import "../blocks/companents/field-checkbox/field-checkbox";
-//@import "../blocks/companents/field-num/field-num";
+@import "../blocks/companents/field-num/field-num";
 @import "../blocks/companents/modal/modal";
 
 
@@ -52,6 +52,8 @@
 @import "../blocks/project/add-basket/add-basket";
 @import "../blocks/project/catalog/catalog";
 @import "../blocks/project/product-list/product-list";
+@import "../blocks/project/mb-product/mb-product";
+@import "../blocks/project/curtain/curtain";
 
 .fancybox-active {
   @media (max-width: $screen-xl - 1) {
@@ -99,6 +101,7 @@
   padding: 0;
   border: 0;
   margin-left: 25px;
+  cursor: pointer;
 }
 
 .icon-btn__quan {

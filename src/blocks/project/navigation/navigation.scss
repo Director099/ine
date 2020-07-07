@@ -5,7 +5,7 @@
 
 .navigation__list {
   @include ul-none();
-  @include row(35px, 35px, 35px, 35px, 35px);
+  @include row(30px, 30px, 30px, 30px, 35px);
 }
 
 .navigation__item {
@@ -27,6 +27,14 @@
 
   .burger {
     margin-right: 15px;
+  }
+
+  &:hover {
+    color: $color-main;
+
+    .burger {
+      color: $color-main;
+    }
   }
 
   @media (max-width: $screen-xl - 1) {
