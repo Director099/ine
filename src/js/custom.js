@@ -433,10 +433,26 @@
   $('.js-show-phone').on('click', function() {
     $('#phone').toggleClass('active');
     $('#search-mobile').removeClass('active');
+
+    $.fancybox.close({
+      src: '#menu',
+      type : 'inline',
+      touch: false,
+    })
   });
 
   $('.js-show-search').on('click', function() {
     $('#search-mobile').toggleClass('active');
     $('#phone').removeClass('active');
+
+    $.fancybox.close({
+      src: '#menu',
+      type : 'inline',
+      touch: false,
+    })
   });
+
+  $('.js-close-curtain').on('click', function () {
+    $(this).parents('.curtain').removeClass('active');
+  })
 })();
