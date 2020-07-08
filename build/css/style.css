@@ -1464,6 +1464,7 @@ input:checked ~ .field-checkbox__name-text:after {
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 15px;
+    min-height: 108px;
 }
 .product__char-item strong {
     color: #3a426d;

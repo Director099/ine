@@ -6,7 +6,7 @@ block header
   +page-header()
 block content
   main
-    .content
+    .content.content--news
       .container
         +breadcrumbs()
           +breadcrumbs-item('Главная', 'index.html')
@@ -72,14 +72,26 @@ block content
                         span.product-card__blur(style="background-image: url('img/content/product-1.png')")
 
 
+
             .content__col.content__col--xl-9
               .product-card__content
                 .product-card__buy
                   strong.product-card__price 905 ₽/#[sub упак.]
                   a.btn.btn--white-b.btn--s-middle(href="#modal-buy", data-fancybox="") Купить в один клик
                 .product-card__quantity-choice.d-xl-none
-                  .add-basket
+                  .add-basket.js-add-basket
                     button.btn.btn--main.btn--r-middle Выбрать
+                    form.add-basket__row.d-none
+                      +field-num({
+                          mods: '',
+                          attrs: {
+                              name: 'quantity',
+                              max: '1000',
+                              min: '1',
+                              step: '1',
+                          }
+                      }).add-basket__num
+                      button.btn.btn--main.btn--r-middle В корзину
                 +table().table--striped.product-card__table
                   tr
                     td Цена за:
@@ -106,7 +118,17 @@ block content
                       span.text-warning Много
                   .product-card__quantity-choice.d-none.d-xl-block
                     .add-basket
-                      button.btn.btn--main.btn--r-middle Выбрать
+                      form.add-basket__row
+                        +field-num({
+                            mods: '',
+                            attrs: {
+                                name: 'quantity',
+                                max: '1000',
+                                min: '1',
+                                step: '1',
+                            }
+                        }).add-basket__num
+                        button.btn.btn--main.btn--r-middle В корзину
                 h3.product-card__title-desc Описание
                 .product-card__desc-wrap
                   .product-card__desc.product-card__desc--clump
@@ -114,39 +136,6 @@ block content
                     p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
                     p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
                   button.btn.btn--link.js-reed-more Показать больше
-
-    .content.content--news
-      .container
-        .d-none.d-xl-block
-          header.title-line
-            h3.title-h.title-h--black.title-line__line Выберите товар
-        .content__row.content__row--col-mb.content__mob-swipe
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
-          .content__col.content__col--xl-2
-            +product-preview('6353')
 block footer
   +page-footer()
   +modal('modal-buy', 'Купить в 1 клик').modal--width
@@ -185,13 +174,13 @@ block footer
           })
         .modal__group
           +field-checkbox([
-          {
-              title: 'Я согласен на <a href="#">обработку персональных данных</a>',
-              attrs: {
-                  name: 'check0',
-                  checked: '',
-                  required: '',
-              }
-            },
+              {
+                  title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                  attrs: {
+                      name: 'check0',
+                      checked: '',
+                      required: '',
+                  }
+              },
           ])
         button.btn.btn--s-middle.btn--main Оформить заказ

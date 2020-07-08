@@ -370,17 +370,6 @@
 }(jQuery);
 
 /**
- * @description Добавление в корзину
- */
-
-(function () {
-  $('.js-add-basket > .btn').on('click', function() {
-    $(this).addClass('d-none');
-    $(this).next().removeClass('d-none');
-  })
-})();
-
-/**
  * @description Читать далее
  */
 

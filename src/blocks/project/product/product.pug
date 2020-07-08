@@ -1,12 +1,12 @@
-mixin product()
+mixin product(category)
   article.product
     .product__row
-      a.product__picture(href="catalog-single.html" data-label="img/content/product-1.png")
+      a.product__picture(href=`${category === true ? "catalog-single.html" : "catalog-single2.html"}` data-label="img/content/product-1.png")
         img(src="img/content/product-1.png", alt="Show punto batİk design")
         span.product__blur(style="background-image: url('img/content/product-1.png')")
       .product__content
         h3.product__title
-          a(href="catalog-single.html") Show punto batİk design
+          a(href=`${category === true ? "catalog-single.html" : "catalog-single2.html"}`) Show punto batİk design
         .product__desc.d-none.d-xl-block
           p Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...
         ul.product__char-list.d-none.d-xl-block
@@ -15,18 +15,21 @@ mixin product()
           li.product__char-item #[strong Моток:] 100 гр — 350 м
           li.product__char-item #[strong Состав:] 100% Акрил (антипиллинг акрил)
           li.product__char-item #[strong В наличии:] #[span.text-success Много]
-          li.product__char-item #[strong Кол-во подвидов:] #[a(href="#") 10]
+          if(category === true)
+            li.product__char-item #[strong Кол-во подвидов:] #[a(href="#") 10]
         strong.product__price 905 ₽/#[sub упак.]
-        .add-basket.js-add-basket
-          button.btn.btn--main.btn--r-middle Выбрать
-          form.add-basket__row.d-none
-            +field-num({
-                mods: '',
-                attrs: {
-                    name: 'quantity',
-                    max: '1000',
-                    min: '1',
-                    step: '1',
-                }
-            }).add-basket__num
-            button.btn.btn--main.btn--r-middle В корзину
+        .add-basket
+          if(category === true)
+            button.btn.btn--main.btn--r-middle Выбрать
+          else
+            form.add-basket__row
+              +field-num({
+                  mods: '',
+                  attrs: {
+                      name: 'quantity',
+                      max: '1000',
+                      min: '1',
+                      step: '1',
+                  }
+              }).add-basket__num
+              button.btn.btn--main.btn--r-middle В корзину
