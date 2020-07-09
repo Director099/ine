@@ -3,6 +3,8 @@
   border: 1px solid #DFE2ED;
   border-radius: 5px;
   transition: $time;
+  min-height: 100%;
+  box-shadow: 10px 10px 7px rgba(221, 226, 238, 0.12), -10px -10px 16px rgba(255, 255, 255, 0.2);
 
   @media (min-width: $screen-xl) {
     padding: 29px 30px 30px;
@@ -123,6 +125,11 @@
 .product__char-item strong {
   color: #3A426D;
   font-weight: 500;
+}
+
+.product__char-item a {
+  text-decoration: underline;
+  color: inherit;
 }
 
 .product__price {

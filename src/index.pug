@@ -45,23 +45,23 @@ block content
             +tab-filter-item('Новинки', 'new')
             +tab-filter-item('Акции', 'sale')
           .content__row.content__row--xs-6.content__row--col-mb.count-hide
-            .content__col.content__col--6(data-filter="advice")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
               +product(true)
-            .content__col.content__col--6(data-filter="new")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="new")
               +product(false)
-            .content__col.content__col--6(data-filter="advice")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
               +product(true)
-            .content__col.content__col--6(data-filter="sale")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
               +product(false)
-            .content__col.content__col--6(data-filter="sale")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
               +product(true)
-            .content__col.content__col--6(data-filter="sale")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
               +product(false)
-            .content__col.content__col--6(data-filter="advice")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
               +product(true)
-            .content__col.content__col--6(data-filter="advice")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
               +product(false)
-            .content__col.content__col--6(data-filter="sale")
+            .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
               +product(true)
           button.btn.btn--lighten.btn--s-big.content__btn-more.js-show-more Показать больше
     .content.content--news.content--xs-pb0
@@ -98,3 +98,37 @@ block content
           a(href="news.html") Все записи
 block footer
   +page-footer()
+  +modal('modal-category').modal--full
+    .content.content--modal
+      .container
+        header.modal__header.modal__header--no-line.modal__header--plr0
+          span.close.modal__close(data-fancybox-close='', aria-label='Закрыть') #[span]
+          h2.modal__title.modal__title--line.modal__title--medium
+            a(href="catalog-single.html") Show punto batİk design
+        .content__row.content__row--xs-6.content__row--col-mb
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')
+          .content__col.content__col--6.content__col--md-4.content__col--xl-2
+            +product-preview('6353')

@@ -62,12 +62,10 @@ mixin page-header(mod)
           .container__left
             .page-header__row.page-header__row--sb
               nav.navigation
+                +burger('Показать каталог').navigation__burger-sub.js-open-catalog
                 ul.navigation__list
                   li.navigation__item
-                    a.navigation__link.js-open-catalog
-                      span.burger(aria-label="Каталог")
-                        span
-                      span Каталог
+                    a.navigation__link(href="catalog.html") Каталог
                   li.navigation__item
                     a.navigation__link(href="template-page.html") О компании
                   li.navigation__item

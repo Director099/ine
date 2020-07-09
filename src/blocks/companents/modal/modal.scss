@@ -28,6 +28,9 @@ $z-index-modal:               100 !default;
   overflow: hidden;
   background: #F4F5F9;
   padding: 0;
+  margin: 5px;
+  width: auto;
+  height: auto;
   border: 1px solid #DFE2ED;
   border-radius: 5px;
   //box-shadow: 10px 10px 14px rgba(210, 215, 227, 0.45), -10px -10px 12px rgba(255, 255, 255, 0.25);
@@ -36,6 +39,18 @@ $z-index-modal:               100 !default;
   &--width .modal__dialog {
     @media (min-width: $screen-lg) {
       width: 420px;
+    }
+  }
+
+  &--full {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-color: $white;
+
+    .modal__dialog {
+      width: 100%;
     }
   }
 
@@ -69,6 +84,15 @@ $z-index-modal:               100 !default;
     padding: 25px 30px;
     flex-shrink: 0;
     border-bottom: 1px solid #DFE2ED;
+
+    &--plr0 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &--no-line {
+      border-bottom: 0;
+    }
   }
 
   &__title {
@@ -78,6 +102,19 @@ $z-index-modal:               100 !default;
     line-height: 21px;
     font-weight: 700;
     color: currentColor;
+
+    &--medium {
+      font-weight: 500;
+    }
+
+    &--line {
+
+    }
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
   }
 
   &__close {

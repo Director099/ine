@@ -68,6 +68,7 @@ a {
 }
 a:hover {
     text-decoration: none;
+    color: inherit;
 }
 button {
     transition: 0.3s;
@@ -352,6 +353,7 @@ a.btn--disabled {
     border: 1px solid #566dfb;
 }
 .btn--main:hover, .btn--main:focus {
+    color: #ffffff;
     box-shadow: 10px 10px 7px rgba(221, 226, 238, 0.08), -10px -10px 16px rgba(255, 255, 255, 0.12);
 }
 .btn--link {
@@ -957,9 +959,22 @@ input:checked ~ .field-checkbox__name-text:after {
     overflow: hidden;
     background: #f4f5f9;
     padding: 0;
+    margin: 5px;
+    width: auto;
+    height: auto;
     border: 1px solid #dfe2ed;
     border-radius: 5px;
     -webkit-overflow-scrolling: touch;
+}
+.modal--full {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-color: white;
+}
+.modal--full .modal__dialog {
+    width: 100%;
 }
 .modal__dialog {
     position: relative;
@@ -981,6 +996,13 @@ input:checked ~ .field-checkbox__name-text:after {
     flex-shrink: 0;
     border-bottom: 1px solid #dfe2ed;
 }
+.modal__header--plr0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.modal__header--no-line {
+    border-bottom: 0;
+}
 .modal__title {
     margin-top: 0;
     margin-bottom: 0;
@@ -988,6 +1010,13 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 21px;
     font-weight: 700;
     color: currentColor;
+}
+.modal__title--medium {
+    font-weight: 500;
+}
+.modal__title a {
+    text-decoration: underline;
+    color: inherit;
 }
 .modal__close {
     position: absolute !important;
@@ -1153,7 +1182,7 @@ input:checked ~ .field-checkbox__name-text:after {
     padding-bottom: 31px;
 }
 .page-header__bottom--line {
-    border: 1px solid #dfe2ed;
+    border-bottom: 1px solid #dfe2ed;
     margin-bottom: 30px;
 }
 .page-header__form {
@@ -1412,6 +1441,8 @@ input:checked ~ .field-checkbox__name-text:after {
     border: 1px solid #dfe2ed;
     border-radius: 5px;
     transition: 0.3s;
+    min-height: 100%;
+    box-shadow: 10px 10px 7px rgba(221, 226, 238, 0.12), -10px -10px 16px rgba(255, 255, 255, 0.2);
 }
 .product__picture {
     position: relative;
@@ -1470,6 +1501,10 @@ input:checked ~ .field-checkbox__name-text:after {
     color: #3a426d;
     font-weight: 500;
 }
+.product__char-item a {
+    text-decoration: underline;
+    color: inherit;
+}
 .product__price {
     display: block;
     font-weight: bold;
@@ -1526,6 +1561,9 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-top: 11px;
     margin-right: 15px;
 }
+.navigation__burger-sub:hover {
+    color: #0275d9;
+}
 .n-article__title {
     margin-bottom: 34px;
 }
@@ -1555,6 +1593,9 @@ input:checked ~ .field-checkbox__name-text:after {
     background: linear-gradient(180deg, #fefefe 0%, #fafafa 100%);
     box-shadow: 10px 10px 7px rgba(221, 226, 238, 0.12), -10px -10px 16px rgba(255, 255, 255, 0.2);
 }
+.category:hover .category__title {
+    color: #3a426d;
+}
 .category__img {
     width: 100%;
     height: 143px;
@@ -1576,6 +1617,7 @@ input:checked ~ .field-checkbox__name-text:after {
     font-weight: 400;
     margin-top: 10px;
     min-height: 33px;
+    transition: 0.3s;
 }
 .product-card__title {
     margin-bottom: 20px;
@@ -2332,6 +2374,9 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 13px;
     color: rgba(58, 66, 109, 0.5);
 }
+.fancybox-slide--html {
+    padding: 0;
+}
 .text-danger {
     color: #d8544f;
 }
@@ -2438,6 +2483,12 @@ input:checked ~ .field-checkbox__name-text:after {
     }
     .d-md-block {
         display: block !important;
+    }
+    .content__col--md-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 @media (min-width: 992px) {
@@ -2603,6 +2654,9 @@ input:checked ~ .field-checkbox__name-text:after {
     }
     .content--news {
         padding-bottom: 100px;
+    }
+    .content--modal {
+        padding-bottom: 183px;
     }
     .content__header {
         margin-bottom: 40px;
@@ -2772,10 +2826,14 @@ input:checked ~ .field-checkbox__name-text:after {
     .product-card__slider {
         margin-bottom: 0;
     }
+    .product-preview:hover {
+        box-shadow: 10px 10px 14px rgba(210, 215, 227, 0.45), -10px -10px 12px rgba(255, 255, 255, 0.25);
+    }
     .product-preview:hover .product-preview__wrap-hide {
         opacity: 1;
         z-index: 9;
         visibility: visible;
+        box-shadow: 10px 10px 14px rgba(210, 215, 227, 0.45), -10px -10px 12px rgba(255, 255, 255, 0.25);
     }
     .product-preview {
         padding: 10px 20px 20px;

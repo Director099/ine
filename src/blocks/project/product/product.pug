@@ -16,11 +16,11 @@ mixin product(category)
           li.product__char-item #[strong Состав:] 100% Акрил (антипиллинг акрил)
           li.product__char-item #[strong В наличии:] #[span.text-success Много]
           if(category === true)
-            li.product__char-item #[strong Кол-во подвидов:] #[a(href="#") 10]
+            li.product__char-item #[strong Кол-во подвидов:] #[a(href="#modal-category" data-fancybox="") 10]
         strong.product__price 905 ₽/#[sub упак.]
         .add-basket
           if(category === true)
-            button.btn.btn--main.btn--r-middle Выбрать
+            a.btn.btn--main.btn--r-middle(href="#modal-category" data-fancybox="") Выбрать
           else
             form.add-basket__row
               +field-num({

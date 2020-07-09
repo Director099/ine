@@ -1,6 +1,19 @@
 'use strict';
 
 /**
+ * @description Плавный скролл
+ */
+
+(function () {
+  $(".js-scroll").click(function () {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+    return false;
+  });
+})();
+
+/**
  * @description Отключил граб
  */
 
@@ -375,8 +388,13 @@
 
 (function () {
   $('.js-reed-more').on('click', function() {
-    $(this).prev().removeClass('product-card__desc--clump');
-    $(this).addClass('d-none');
+    const contentDescription = $(this).prev();
+    contentDescription.toggleClass('product-card__desc--clump');
+    if(contentDescription.hasClass('product-card__desc--clump')) {
+      $(this).text('Показать больше')
+    } else {
+      $(this).text('Скрыть')
+    }
   })
 })();
 
@@ -406,11 +424,18 @@
  */
 
 (function () {
-  $('.js-open-catalog').on('click', function() {
-    $('.catalog').toggleClass('active');
-    $(this).find('.burger').toggleClass('burger--close');
+  const btnHover = $('.js-open-catalog');
+  btnHover.hover(function(e) {
+    $('.catalog').addClass('active');
+    btnHover.addClass('burger--close');
   });
+
+  $('main, .page-header__top').hover(function(e) {
+    $('.catalog').removeClass('active');
+    btnHover.removeClass('burger--close');
+  })
 })();
+
 
 
 

@@ -132,25 +132,25 @@ block content
                   a.sort__link(href='') По убыванию цены
                 li.sort__item
                   a.sort__link(href='') По возрастанию цены
-        .content__row.content__row--xs-6.content__row--col-mb
-          .content__col.content__col--6
-            +product()
-          .content__col.content__col--6
-            +product()
-          .content__col.content__col--6
-            +product()
-          .content__col.content__col--6
-            +product()
-          .content__col.content__col--6
-            +product()
-          .content__col.content__col--6
-            +product()
-          //.content__col.content__col--6
-          //  +product()
-          //.content__col.content__col--6
-          //  +product()
-          //.content__col.content__col--6
-          //  +product()
-        button.btn.btn--lighten.btn--s-big.content__btn-more Показать больше
+        .content__row.content__row--xs-6.content__row--col-mb.count-hide
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
+            +product(true)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="new")
+            +product(false)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
+            +product(true)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
+            +product(false)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
+            +product(true)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
+            +product(false)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
+            +product(true)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="advice")
+            +product(false)
+          .content__col.content__col--6.content__col--md-4.content__col--xl-6(data-filter="sale")
+            +product(true)
+        button.btn.btn--lighten.btn--s-big.content__btn-more.js-show-more Показать больше
 block footer
   +page-footer()

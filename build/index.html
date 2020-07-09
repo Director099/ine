@@ -10,6 +10,7 @@
     <meta name="format-detection" content="email=no">
     <meta content="notranslate" name="google">
     <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
@@ -95,8 +96,9 @@
                             <div class="container__left">
                                 <div class="page-header__row page-header__row--sb">
                                     <nav class="navigation">
+                                        <button class="burger navigation__burger-sub js-open-catalog" aria-label="Показать каталог"><span>Показать каталог</span></button>
                                         <ul class="navigation__list">
-                                            <li class="navigation__item"><a class="navigation__link js-open-catalog"><span class="burger" aria-label="Каталог"><span></span></span><span>Каталог</span></a></li>
+                                            <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>
@@ -219,35 +221,35 @@
                                 <div class="swiper-slide">
                                     <div class="main-banner" style="background-image: url('img/decor/main-banner-1.jpg')">
                                         <section class="main-banner__content">
-                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn">Подробнее</a>
+                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn" href="#">Подробнее</a>
                                         </section>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="main-banner" style="background-image: url('img/decor/main-banner-1.jpg')">
                                         <section class="main-banner__content">
-                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn">Подробнее</a>
+                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn" href="#">Подробнее</a>
                                         </section>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="main-banner" style="background-image: url('img/decor/main-banner-1.jpg')">
                                         <section class="main-banner__content">
-                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn">Подробнее</a>
+                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn" href="#">Подробнее</a>
                                         </section>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="main-banner" style="background-image: url('img/decor/main-banner-1.jpg')">
                                         <section class="main-banner__content">
-                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn">Подробнее</a>
+                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn" href="#">Подробнее</a>
                                         </section>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="main-banner" style="background-image: url('img/decor/main-banner-1.jpg')">
                                         <section class="main-banner__content">
-                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn">Подробнее</a>
+                                            <h2 class="title-h main-banner__title">Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</h2><a class="btn btn--main btn--s-middle main-banner__btn" href="#">Подробнее</a>
                                         </section>
                                     </div>
                                 </div>
@@ -347,7 +349,7 @@
                                 <li class="tab-filter__item"><a class="btn btn--white tab-filter__btn" data-btn-filter="sale">Акции</a></li>
                             </ul>
                             <div class="content__row content__row--xs-6 content__row--col-mb count-hide">
-                                <div class="content__col content__col--6" data-filter="advice">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -361,16 +363,15 @@
                                                     <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
                                                     <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
                                                     <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#">10</a></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
                                                 </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="new">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="new">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -399,7 +400,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="advice">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -413,16 +414,15 @@
                                                     <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
                                                     <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
                                                     <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#">10</a></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
                                                 </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="sale">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -451,7 +451,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="sale">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -465,16 +465,15 @@
                                                     <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
                                                     <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
                                                     <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#">10</a></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
                                                 </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="sale">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -503,7 +502,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="advice">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -517,16 +516,15 @@
                                                     <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
                                                     <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
                                                     <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#">10</a></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
                                                 </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="advice">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -555,7 +553,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="content__col content__col--6" data-filter="sale">
+                                <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                     <article class="product">
                                         <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
                                             <div class="product__content">
@@ -569,10 +567,9 @@
                                                     <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
                                                     <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
                                                     <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#">10</a></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
                                                 </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -649,8 +646,8 @@
                             <div class="page-footer__col page-footer__col--xl-4">
                                 <div class="page-footer__copyright">
                                     <div class="copyright">
-                                        <p>2013 ©</p>
-                                        <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»</p>
+                                        <p>2013 © «INE»</p>
+                                        <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</p>
                                     </div><a class="develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
                                 </div>
                             </div>
@@ -658,6 +655,255 @@
                     </div>
                 </div>
             </footer>
+            <div class="modal modal--full" id="modal-category" tabindex="-1" role="dialog">
+                <div class="modal__dialog" role="document">
+                    <div class="modal__content">
+                        <div class="content content--modal">
+                            <div class="container">
+                                <header class="modal__header modal__header--no-line modal__header--plr0"><span class="close modal__close" data-fancybox-close="" aria-label="Закрыть"><span></span></span>
+                                    <h2 class="modal__title modal__title--line modal__title--medium"><a href="catalog-single.html">Show punto batİk design</a></h2>
+                                </header>
+                                <div class="content__row content__row--xs-6 content__row--col-mb">
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__col content__col--6 content__col--md-4 content__col--xl-2">
+                                        <div class="product-preview"><span class="product-preview__number">6353</span>
+                                            <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                            <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
+                                                <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
+                                                <div class="add-basket">
+                                                    <form class="add-basket__row add-basket__row--column">
+                                                        <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="0" name="quantity" max="1000" min="1" step="1"/></span></span>
+                                                        </div>
+                                                        <button class="btn btn--main btn--r-middle">В корзину</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="mb-menu" id="menu" tabindex="-1" role="dialog">

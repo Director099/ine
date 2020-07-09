@@ -10,6 +10,7 @@
     <meta name="format-detection" content="email=no">
     <meta content="notranslate" name="google">
     <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
@@ -95,8 +96,9 @@
                             <div class="container__left">
                                 <div class="page-header__row page-header__row--sb">
                                     <nav class="navigation">
+                                        <button class="burger navigation__burger-sub js-open-catalog" aria-label="Показать каталог"><span>Показать каталог</span></button>
                                         <ul class="navigation__list">
-                                            <li class="navigation__item"><a class="navigation__link js-open-catalog"><span class="burger" aria-label="Каталог"><span></span></span><span>Каталог</span></a></li>
+                                            <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">О компании</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="template-page.html">Условия работы</a></li>
                                             <li class="navigation__item"><a class="navigation__link" href="news.html">Новости</a></li>
@@ -287,9 +289,7 @@
                                     <div class="product-card__content">
                                         <div class="product-card__buy"><strong class="product-card__price">905 ₽/<sub>упак.</sub></strong><a class="btn btn--white-b btn--s-middle" href="#modal-buy" data-fancybox="">Купить в один клик</a></div>
                                         <div class="product-card__quantity-choice d-xl-none">
-                                            <div class="add-basket">
-                                                <button class="btn btn--main btn--r-middle">Выбрать</button>
-                                            </div>
+                                            <div class="add-basket"><a class="btn btn--main btn--r-middle js-scroll" href="#products">Выбрать</a></div>
                                         </div>
                                         <div class="table table--striped product-card__table">
                                             <table>
@@ -318,12 +318,10 @@
                                         <div class="product-card__quantity">
                                             <div class="product-card__quantity-info">
                                                 <div class="product-card__quantity-group"><strong class="product-card__quantity-text">Кол-во подвидов:</strong><a href="#">10</a></div>
-                                                <div class="product-card__quantity-group"><strong class="product-card__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                                <div class="product-card__quantity-group"><strong class="product-card__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                             </div>
                                             <div class="product-card__quantity-choice d-none d-xl-block">
-                                                <div class="add-basket">
-                                                    <button class="btn btn--main btn--r-middle">Выбрать</button>
-                                                </div>
+                                                <div class="add-basket"><a class="btn btn--main btn--r-middle js-scroll" href="#products">Выбрать</a></div>
                                             </div>
                                         </div>
                                         <h3 class="product-card__title-desc">Описание</h3>
@@ -341,7 +339,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="content content--news">
+                <div class="content content--news" id="products">
                     <div class="container">
                         <div class="d-none d-xl-block">
                             <header class="title-line">
@@ -353,7 +351,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -371,7 +369,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -389,7 +387,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -407,7 +405,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -425,7 +423,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -443,7 +441,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -461,7 +459,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -479,7 +477,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -497,7 +495,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -515,7 +513,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -533,7 +531,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -551,7 +549,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -569,7 +567,7 @@
                                 <div class="product-preview"><span class="product-preview__number">6353</span>
                                     <div class="product-preview__img"><img src="img/content/product-1.png" alt="Изображение" /><span class="product-preview__blur" style="background-image: url('img/content/product-1.png')"></span></div>
                                     <div class="product-preview__wrap-hide"><strong class="product-preview__price">905 ₽/<sub>упак.</sub></strong>
-                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-warning">Много</span></div>
+                                        <div class="product-preview__quantity-group"><strong class="product-preview__quantity-text">В наличии:</strong><span class="text-success">Много</span></div>
                                         <div class="add-basket">
                                             <form class="add-basket__row add-basket__row--column">
                                                 <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -612,8 +610,8 @@
                             <div class="page-footer__col page-footer__col--xl-4">
                                 <div class="page-footer__copyright">
                                     <div class="copyright">
-                                        <p>2013 ©</p>
-                                        <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия «INE»</p>
+                                        <p>2013 © «INE»</p>
+                                        <p>Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия</p>
                                     </div><a class="develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
                                 </div>
                             </div>

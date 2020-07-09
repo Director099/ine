@@ -79,7 +79,7 @@ block content
                   a.btn.btn--white-b.btn--s-middle(href="#modal-buy", data-fancybox="") Купить в один клик
                 .product-card__quantity-choice.d-xl-none
                   .add-basket
-                    button.btn.btn--main.btn--r-middle Выбрать
+                    a.btn.btn--main.btn--r-middle.js-scroll(href="#products") Выбрать
                 +table().table--striped.product-card__table
                   tr
                     td Цена за:
@@ -103,10 +103,10 @@ block content
                       a(href="#") 10
                     .product-card__quantity-group
                       strong.product-card__quantity-text В наличии:
-                      span.text-warning Много
+                      span.text-success Много
                   .product-card__quantity-choice.d-none.d-xl-block
                     .add-basket
-                      button.btn.btn--main.btn--r-middle Выбрать
+                      a.btn.btn--main.btn--r-middle.js-scroll(href="#products") Выбрать
                 h3.product-card__title-desc Описание
                 .product-card__desc-wrap
                   .product-card__desc.product-card__desc--clump
@@ -115,7 +115,7 @@ block content
                     p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
                   button.btn.btn--link.js-reed-more Показать больше
 
-    .content.content--news
+    .content.content--news(id="products")
       .container
         .d-none.d-xl-block
           header.title-line

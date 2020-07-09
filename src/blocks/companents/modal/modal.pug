@@ -26,7 +26,8 @@ mixin modal(id, title, mods)
   .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
     .modal__dialog(role='document')
         .modal__content
-          .modal__header
-            span.close.modal__close(data-fancybox-close='', aria-label='Закрыть') #[span]
-            h4.modal__title!= title
+          if(title)
+            .modal__header
+              span.close.modal__close(data-fancybox-close='', aria-label='Закрыть') #[span]
+              h4.modal__title!= title
           block
