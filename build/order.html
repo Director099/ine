@@ -34,6 +34,14 @@
                             <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
                         </form>
                     </div>
+                    <div class="curtain" id="user">
+                        <div class="curtain__item curtain__item--row"><span class="curtain__title">Личный кабинет</span>
+                            <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
+                        </div>
+                        <div class="curtain__item"><a class="curtain__phone curtain__phone--m0" href="#">Войти</a></div>
+                        <div class="curtain__item"><a class="curtain__phone curtain__phone--m0" href="#">Регестрация</a></div>
+                        <div class="curtain__item"><a class="curtain__phone curtain__phone--m0" href="#">Личный кабинет</a></div>
+                    </div>
                     <div class="curtain" id="phone">
                         <div class="curtain__item curtain__item--row"><span class="curtain__title">Телефоны</span>
                             <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
@@ -52,6 +60,13 @@
                                 </a>
                             </div>
                             <div class="page-header__info">
+                                <div class="d-xl-none">
+                                    <button class="icon-btn js-show-user">
+                                        <svg width="22" height="22" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-user"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                                 <div class="d-xl-none">
                                     <button class="icon-btn js-show-phone">
                                         <svg width="22" height="22" fill="none">
@@ -74,10 +89,21 @@
                                     <div class="phone page-header__phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
                                         <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
                                     </div>
-                                </div><a class="basket d-none d-xl-block" href="basket.html">
+                                </div>
+                                <div class="d-none d-xl-block">
+                                    <div class="user page-header__user">
+                                        <svg class="user__icon" width="25" height="25" fill="none">
+                                            <use xlink:href="img/symbols.svg#icon-user"></use>
+                                        </svg>
+                                        <div class="user__drop">
+                                            <div class="user__item"><a>Войти</a><a>Регестрация</a></div>
+                                            <div class="user__item"><a>Личный кабинет</a></div>
+                                        </div>
+                                    </div>
+                                </div><a class="basket d-none d-xl-block page-header__basket" href="basket.html">
                                     <div class="basket__row">
                                         <div class="basket__icon">
-                                            <svg width="30" height="30">
+                                            <svg width="26" height="26">
                                                 <use xlink:href="img/symbols.svg#basket"></use>
                                             </svg>
                                         </div>

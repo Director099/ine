@@ -41,9 +41,9 @@
   width: 100%;
 }
 
-.page-header__phone {
-  margin-right: 40px;
-}
+//.page-header__phone {
+//  margin-right: 40px;
+//}
 
 .page-header__logo {
   display: flex;
@@ -52,6 +52,15 @@
 
 .page-header__menu {
   margin-right: 25px;
+}
+
+.page-header__basket {
+  margin-left: 24px;
+}
+
+.page-header__user {
+  padding-left: 13px;
+  padding-bottom: 8px;
 }
 
 .page-header__rel {

@@ -1,0 +1,50 @@
+.user {
+  position: relative;
+}
+
+
+.user:hover .user__drop {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9;
+}
+
+.user__drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(86,109,251,.07);
+  border-radius: 5px;
+  margin-bottom: 0;
+  transition: .3s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  min-width: 169px;
+}
+
+.user__item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #dfe2ed;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.user__item a {
+  &::after {
+    content: '|';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}

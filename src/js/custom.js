@@ -444,26 +444,31 @@
  */
 
 (function () {
-  $('.js-show-phone').on('click', function() {
-    $('#phone').toggleClass('active');
-    $('#search-mobile').removeClass('active');
-
+  function fancyClose() {
     $.fancybox.close({
       src: '#menu',
       type : 'inline',
       touch: false,
-    })
+    });
+  }
+
+  $('.js-show-phone').on('click', function() {
+    $('#phone').toggleClass('active');
+    $('#search-mobile, #user').removeClass('active');
+    fancyClose();
+
   });
 
   $('.js-show-search').on('click', function() {
     $('#search-mobile').toggleClass('active');
-    $('#phone').removeClass('active');
+    $('#phone, #user').removeClass('active');
+    fancyClose();
+  });
 
-    $.fancybox.close({
-      src: '#menu',
-      type : 'inline',
-      touch: false,
-    })
+  $('.js-show-user').on('click', function() {
+    $('#user').toggleClass('active');
+    $('#phone, #search-mobile').removeClass('active');
+    fancyClose();
   });
 
   $('.js-close-curtain').on('click', function () {

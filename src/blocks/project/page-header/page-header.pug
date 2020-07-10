@@ -7,6 +7,17 @@ mixin page-header(mod)
           button.btn.btn--r-middle.btn--main Найти
           button.close.curtain__close.js-close-curtain(aria-label="Закрыть меню" type="button")
             span
+      .curtain(id="user")
+        .curtain__item.curtain__item--row
+          span.curtain__title Личный кабинет
+          button.close.curtain__close.js-close-curtain(aria-label="Закрыть меню" type="button")
+            span
+        .curtain__item
+          a.curtain__phone.curtain__phone--m0(href="#") Войти
+        .curtain__item
+          a.curtain__phone.curtain__phone--m0(href="#") Регестрация
+        .curtain__item
+          a.curtain__phone.curtain__phone--m0(href="#") Личный кабинет
       .curtain(id="phone")
         .curtain__item.curtain__item--row
           span.curtain__title Телефоны
@@ -34,6 +45,10 @@ mixin page-header(mod)
               p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия
           .page-header__info
             .d-xl-none
+              button.icon-btn.js-show-user
+                svg(width="22" height="22" fill="none")
+                  use(xlink:href="img/symbols.svg#icon-user")
+            .d-xl-none
               button.icon-btn.js-show-phone
                 svg(width="22" height="22" fill="none")
                   use(xlink:href="img/symbols.svg#icon-phone")
@@ -48,10 +63,20 @@ mixin page-header(mod)
                   use(xlink:href="img/symbols.svg#icon-serch")
             .d-none.d-xl-block
               +phone().page-header__phone
-            a.basket.d-none.d-xl-block(href="basket.html")
+            .d-none.d-xl-block
+              .user.page-header__user
+                svg.user__icon(width="25" height="25" fill="none")
+                  use(xlink:href="img/symbols.svg#icon-user")
+                .user__drop
+                  .user__item
+                    a Войти
+                    a Регестрация
+                  .user__item
+                    a Личный кабинет
+            a.basket.d-none.d-xl-block.page-header__basket(href="basket.html")
               .basket__row
                 .basket__icon
-                  svg(width="30", height="30")
+                  svg(width="26", height="26")
                     use(xlink:href="img/symbols.svg#basket")
                 .basket__content.d-none.d-xl-block
                   strong Корзина
