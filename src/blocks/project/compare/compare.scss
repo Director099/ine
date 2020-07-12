@@ -1,0 +1,50 @@
+.compare {
+  position: relative;
+}
+
+.compare__row {
+  display: flex;
+  align-items: center;
+}
+
+.compare__icon {
+  margin-right: 10px;
+  flex-shrink: 0;
+  svg {
+    fill: none;
+  }
+}
+
+.compare__content {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-color;
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.compare__quan {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 3px;
+  color: $white;
+  border-radius: 50px;
+  background-color: $color-main;
+}
+
+.compare:hover .drop {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9;
+}

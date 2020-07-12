@@ -9,6 +9,11 @@
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
     <meta content="notranslate" name="google">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
@@ -50,6 +55,39 @@
                         <div class="curtain__item"><a class="curtain__phone" href="tel:+7(347)246–22–58"><span class="curtain__p-number">+7 (347) 246–22–58</span><span class="curtain__p-text">Примеание</span></a></div>
                         <div class="curtain__item"><a class="curtain__phone" href="tel:+7(347)246–22–58"><span class="curtain__p-number">+7 (347) 246–22–58</span><span class="curtain__p-text">Примеание</span></a></div>
                     </div>
+                    <div class="curtain" id="basket">
+                        <div class="curtain__item curtain__item--row"><span class="curtain__title">Корзина</span>
+                            <button class="close curtain__close js-close-curtain" aria-label="Закрыть меню" type="button"><span></span></button>
+                        </div>
+                        <div class="curtain__scroll">
+                            <div class="drop-basket"><a class="drop-basket__item" href="catalog-single.html">
+                                    <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                    <div class="drop-basket__content">
+                                        <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                    </div>
+                                </a><a class="drop-basket__item" href="catalog-single.html">
+                                    <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                    <div class="drop-basket__content">
+                                        <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                    </div>
+                                </a><a class="drop-basket__item" href="catalog-single.html">
+                                    <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                    <div class="drop-basket__content">
+                                        <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                    </div>
+                                </a><a class="drop-basket__item" href="catalog-single.html">
+                                    <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                    <div class="drop-basket__content">
+                                        <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                    </div>
+                                </a><a class="drop-basket__item" href="catalog-single.html">
+                                    <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                    <div class="drop-basket__content">
+                                        <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="page-header__row page-header__row--sb">
                             <div class="page-header__logo">
@@ -66,19 +104,16 @@
                                             <use xlink:href="img/symbols.svg#icon-user"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none">
                                     <button class="icon-btn js-show-phone">
                                         <svg width="22" height="22" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-phone"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none"><a class="icon-btn" href="basket.html">
+                                    <button class="icon-btn js-show-basket">
                                         <svg width="27" height="23" fill="none">
                                             <use xlink:href="img/symbols.svg#basket"></use>
-                                        </svg><span class="icon-btn__quan">5</span></a></div>
-                                <div class="d-xl-none">
+                                        </svg><span class="icon-btn__quan">5</span>
+                                    </button>
                                     <button class="icon-btn js-show-search">
                                         <svg width="20" height="20" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-serch"></use>
@@ -86,32 +121,82 @@
                                     </button>
                                 </div>
                                 <div class="d-none d-xl-block">
-                                    <div class="phone page-header__phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
-                                        <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                    <div class="page-header__compare">
+                                        <div class="phone page-header__phone"><a class="phone__wrap phone__wrap--pd phone__wrap--arrow" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Звоните с 8:00 до 18:00</span></a>
+                                            <div class="phone__list"><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a><a class="phone__wrap" href="tel:+7(347)246–22–58"><span class="phone__number">+7 (347) 246–22–58</span><span class="phone__text">Примечание</span></a></div>
+                                        </div>
+                                        <div class="compare page-header__user">
+                                            <div class="compare__row"><a class="compare__icon" href="#">
+                                                    <svg width="25" height="25" fill="none">
+                                                        <use xlink:href="img/symbols.svg#icon-user"></use>
+                                                    </svg></a>
+                                                <div class="compare__content"><strong>Профиль</strong></div>
+                                            </div>
+                                            <div class="drop">
+                                                <div class="drop__wrap">
+                                                    <div class="drop__item"><a>Войти</a></div>
+                                                    <div class="drop__item"><a>Регистрация</a></div>
+                                                    <div class="drop__item"><a>Личный кабинет</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compare page-header__basket">
+                                            <div class="compare__row"><a class="compare__icon" href="basket.html">
+                                                    <svg width="26" height="26">
+                                                        <use xlink:href="img/symbols.svg#basket"></use>
+                                                    </svg></a>
+                                                <div class="compare__content"><strong>Корзина</strong><span class="compare__quan">5</span></div>
+                                            </div>
+                                            <div class="drop drop--basket">
+                                                <div class="drop__wrap">
+                                                    <div class="drop-basket">
+                                                        <header class="drop-basket__header drop-basket__header--sb"><a class="btn btn--main btn--r-middle" href="basket.html">Перейти в корзину</a><strong class="drop-basket__header-price">10 860 ₽</strong></header>
+                                                        <div class="baron drop-basket__scroll">
+                                                            <div class="baron__rel">
+                                                                <div class="baron__track">
+                                                                    <div class="baron__free">
+                                                                        <div class="baron__bar"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="baron__scroller"><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a><a class="drop-basket__item" href="catalog-single.html">
+                                                                        <div class="drop-basket__img"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="drop-basket__blur" style="background-image: url('img/content/product-1.png')"></span></div>
+                                                                        <div class="drop-basket__content">
+                                                                            <h3 class="drop-basket__title">Show punto batİk design</h3><span class="drop-basket__qual">4 упак.</span><span class="drop-basket__price">7 999 ₽</span>
+                                                                        </div>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="d-none d-xl-block">
-                                    <div class="user page-header__user">
-                                        <svg class="user__icon" width="25" height="25" fill="none">
-                                            <use xlink:href="img/symbols.svg#icon-user"></use>
-                                        </svg>
-                                        <div class="user__drop">
-                                            <div class="user__item"><a>Войти</a><a>Регестрация</a></div>
-                                            <div class="user__item"><a>Личный кабинет</a></div>
-                                        </div>
-                                    </div>
-                                </div><a class="basket d-none d-xl-block page-header__basket" href="basket.html">
-                                    <div class="basket__row">
-                                        <div class="basket__icon">
-                                            <svg width="26" height="26">
-                                                <use xlink:href="img/symbols.svg#basket"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="basket__content d-none d-xl-block"><strong>Корзина</strong>
-                                            <p>5 позиций на 10 860 ₽</p>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -145,91 +230,97 @@
                             </div>
                             <div class="catalog">
                                 <div class="catalog__row">
-                                    <div class="catalog__col catalog__col--xl-2">
+                                    <div class="catalog__col">
                                         <div class="product-list">
                                             <h3 class="product-list__title">Все для пряжи</h3>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Пряжа</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita Cotton</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Color City</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">YarnArt</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Adelia</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nazar</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Kartopu</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Knitka</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Журналы для вязания</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita Cotton</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Color City</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">YarnArt</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Adelia</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nazar</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Kartopu</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Knitka</a></li>
-                                                </ul>
+                                            <div class="product-list__group">
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Пряжа</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita Cotton</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Color City</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">YarnArt</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Adelia</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nazar</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Kartopu</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Knitka</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Журналы для вязания</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Vita Cotton</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Color City</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">YarnArt</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Adelia</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nazar</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Kartopu</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Knitka</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="catalog__col catalog__col--xl-2">
+                                    <div class="catalog__col">
                                         <div class="product-list">
-                                            <h3 class="product-list__title">Швейная <br/> фурнитура</h3>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Иглы и булавки</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Ручные иглы</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для бытовой машинки</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для промышленной машинки</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Булавки</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Игольницы и наборы</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Материалы</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                                </ul>
+                                            <h3 class="product-list__title">Швейная фурнитура</h3>
+                                            <div class="product-list__group">
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Иглы и булавки</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Ручные иглы</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для бытовой машинки</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Для промышленной машинки</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Булавки</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Игольницы и наборы</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Материалы</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="catalog__col catalog__col--xl-2">
+                                    <div class="catalog__col">
                                         <div class="product-list">
                                             <h3 class="product-list__title">Товары для рукоделия</h3>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Алмазная мозаика</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Полная выкладка</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Частичная выкладка</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Раскройки по номерам</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-list__subitem">
-                                                <h4 class="product-list__subtitle js-collapse">Схемы для вышивки</h4>
-                                                <ul class="product-list__list">
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
-                                                    <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
-                                                </ul>
+                                            <div class="product-list__group">
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Алмазная мозаика</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Полная выкладка</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Частичная выкладка</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Раскройки по номерам</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-list__subitem">
+                                                    <h4 class="product-list__subtitle js-collapse">Схемы для вышивки</h4>
+                                                    <ul class="product-list__list">
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Alize (Ализе)</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Magic</a></li>
+                                                        <li class="product-list__item"><a class="product-list__link" href="catalog.html">Nako</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -428,19 +519,20 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <span>10</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                             </div>
                                         </div>
@@ -450,18 +542,19 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="new">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single2.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single2.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket">
                                                 <form class="add-basket__row">
                                                     <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -479,19 +572,20 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <span>10</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                             </div>
                                         </div>
@@ -501,18 +595,19 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single2.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single2.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket">
                                                 <form class="add-basket__row">
                                                     <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -530,19 +625,20 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <span>10</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                             </div>
                                         </div>
@@ -552,18 +648,19 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single2.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single2.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket">
                                                 <form class="add-basket__row">
                                                     <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -581,19 +678,20 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <span>10</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                             </div>
                                         </div>
@@ -603,18 +701,19 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="advice">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single2.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single2.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single2.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket">
                                                 <form class="add-basket__row">
                                                     <div class="field-num add-basket__num"><span class="field-num__input-wrap"><span class="field-num__input-and-btns">
@@ -632,19 +731,20 @@
                             <div class="content__col content__col--6 content__col--md-4 content__col--xl-6" data-filter="sale">
                                 <article class="product">
                                     <div class="product__row"><a class="product__picture" href="catalog-single.html" data-label="img/content/product-1.png"><img src="img/content/product-1.png" alt="Show punto batİk design" /><span class="product__blur" style="background-image: url('img/content/product-1.png')"></span></a>
-                                        <div class="product__content">
-                                            <h3 class="product__title"><a href="catalog-single.html">Show punto batİk design</a></h3>
-                                            <div class="product__desc d-none d-xl-block">
-                                                <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
-                                            </div>
-                                            <ul class="product__char-list d-none d-xl-block">
-                                                <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
-                                                <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
-                                                <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
-                                                <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
-                                                <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
-                                                <li class="product__char-item"><strong>Кол-во подвидов:</strong> <a href="#modal-category" data-fancybox="">10</a></li>
-                                            </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                        <div class="product__content"><a class="product__wrap-link" href="catalog-single.html">
+                                                <h3 class="product__title">Show punto batİk design</h3>
+                                                <div class="product__desc d-none d-xl-block">
+                                                    <p>Краткое описание товара размером в одну, две, или три строки, а можно и без него, если не влазит – то многотичие...</p>
+                                                </div>
+                                                <ul class="product__char-list d-none d-xl-block">
+                                                    <li class="product__char-item"><strong>Цена за:</strong> 1 упаковку</li>
+                                                    <li class="product__char-item"><strong>В упаковке:</strong> 4 мотка</li>
+                                                    <li class="product__char-item"><strong>Моток:</strong> 100 гр — 350 м</li>
+                                                    <li class="product__char-item"><strong>Состав:</strong> 100% Акрил (антипиллинг акрил)</li>
+                                                    <li class="product__char-item"><strong>В наличии:</strong> <span class="text-success">Много</span></li>
+                                                    <li class="product__char-item"><strong>Кол-во подвидов:</strong> <span>10</span></li>
+                                                </ul><strong class="product__price">905 ₽/<sub>упак.</sub></strong>
+                                            </a>
                                             <div class="add-basket"><a class="btn btn--main btn--r-middle" href="#modal-category" data-fancybox="">Выбрать</a>
                                             </div>
                                         </div>
@@ -712,19 +812,16 @@
                                             <use xlink:href="img/symbols.svg#icon-user"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none">
                                     <button class="icon-btn js-show-phone">
                                         <svg width="22" height="22" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-phone"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none"><a class="icon-btn" href="basket.html">
+                                    <button class="icon-btn js-show-basket">
                                         <svg width="27" height="23" fill="none">
                                             <use xlink:href="img/symbols.svg#basket"></use>
-                                        </svg><span class="icon-btn__quan">5</span></a></div>
-                                <div class="d-xl-none">
+                                        </svg><span class="icon-btn__quan">5</span>
+                                    </button>
                                     <button class="icon-btn js-show-search">
                                         <svg width="20" height="20" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-serch"></use>
@@ -850,6 +947,7 @@
     <script src="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="libs/inputmask/dist/inputmask.min.js"></script>
     <script src="libs/noUiSlider/nouislider.min.js"></script>
+    <script src="libs/baron/baron.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

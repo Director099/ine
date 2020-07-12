@@ -35,6 +35,53 @@ mixin page-header(mod)
           a.curtain__phone(href="tel:+7(347)246–22–58")
             span.curtain__p-number +7 (347) 246–22–58
             span.curtain__p-text Примеание
+      .curtain(id="basket")
+        .curtain__item.curtain__item--row
+          span.curtain__title Корзина
+          button.close.curtain__close.js-close-curtain(aria-label="Закрыть меню" type="button")
+            span
+        .curtain__scroll
+          .drop-basket
+            a.drop-basket__item(href="catalog-single.html")
+              .drop-basket__img
+                img(src="img/content/product-1.png" alt="Show punto batİk design")
+                span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+              .drop-basket__content
+                h3.drop-basket__title Show punto batİk design
+                span.drop-basket__qual 4 упак.
+                span.drop-basket__price 7 999 ₽
+            a.drop-basket__item(href="catalog-single.html")
+              .drop-basket__img
+                img(src="img/content/product-1.png" alt="Show punto batİk design")
+                span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+              .drop-basket__content
+                h3.drop-basket__title Show punto batİk design
+                span.drop-basket__qual 4 упак.
+                span.drop-basket__price 7 999 ₽
+            a.drop-basket__item(href="catalog-single.html")
+              .drop-basket__img
+                img(src="img/content/product-1.png" alt="Show punto batİk design")
+                span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+              .drop-basket__content
+                h3.drop-basket__title Show punto batİk design
+                span.drop-basket__qual 4 упак.
+                span.drop-basket__price 7 999 ₽
+            a.drop-basket__item(href="catalog-single.html")
+              .drop-basket__img
+                img(src="img/content/product-1.png" alt="Show punto batİk design")
+                span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+              .drop-basket__content
+                h3.drop-basket__title Show punto batİk design
+                span.drop-basket__qual 4 упак.
+                span.drop-basket__price 7 999 ₽
+            a.drop-basket__item(href="catalog-single.html")
+              .drop-basket__img
+                img(src="img/content/product-1.png" alt="Show punto batİk design")
+                span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+              .drop-basket__content
+                h3.drop-basket__title Show punto batİk design
+                span.drop-basket__qual 4 упак.
+                span.drop-basket__price 7 999 ₽
       .container
         .page-header__row.page-header__row--sb
           .page-header__logo
@@ -48,39 +95,104 @@ mixin page-header(mod)
               button.icon-btn.js-show-user
                 svg(width="22" height="22" fill="none")
                   use(xlink:href="img/symbols.svg#icon-user")
-            .d-xl-none
               button.icon-btn.js-show-phone
                 svg(width="22" height="22" fill="none")
                   use(xlink:href="img/symbols.svg#icon-phone")
-            .d-xl-none
-              a.icon-btn(href="basket.html")
+              button.icon-btn.js-show-basket()
                 svg(width="27", height="23" fill="none")
                   use(xlink:href="img/symbols.svg#basket")
                 span.icon-btn__quan 5
-            .d-xl-none
               button.icon-btn.js-show-search
                 svg(width="20" height="20" fill="none")
                   use(xlink:href="img/symbols.svg#icon-serch")
             .d-none.d-xl-block
-              +phone().page-header__phone
-            .d-none.d-xl-block
-              .user.page-header__user
-                svg.user__icon(width="25" height="25" fill="none")
-                  use(xlink:href="img/symbols.svg#icon-user")
-                .user__drop
-                  .user__item
-                    a Войти
-                    a Регестрация
-                  .user__item
-                    a Личный кабинет
-            a.basket.d-none.d-xl-block.page-header__basket(href="basket.html")
-              .basket__row
-                .basket__icon
-                  svg(width="26", height="26")
-                    use(xlink:href="img/symbols.svg#basket")
-                .basket__content.d-none.d-xl-block
-                  strong Корзина
-                  p 5 позиций на 10 860 ₽
+              .page-header__compare
+                +phone().page-header__phone
+                .compare.page-header__user
+                  .compare__row
+                    a.compare__icon(href="#")
+                      svg(width="25" height="25" fill="none")
+                        use(xlink:href="img/symbols.svg#icon-user")
+                    .compare__content
+                      strong Профиль
+                  .drop
+                    .drop__wrap
+                      .drop__item
+                        a Войти
+                      .drop__item
+                        a Регистрация
+                      .drop__item
+                        a Личный кабинет
+                .compare.page-header__basket
+                  .compare__row
+                    a.compare__icon(href="basket.html")
+                      svg(width="26", height="26")
+                        use(xlink:href="img/symbols.svg#basket")
+                    .compare__content
+                      strong Корзина
+                      span.compare__quan 5
+                  .drop.drop--basket
+                    .drop__wrap
+                      .drop-basket
+                        header.drop-basket__header.drop-basket__header--sb
+                          a.btn.btn--main.btn--r-middle(href="basket.html") Перейти в корзину
+                          strong.drop-basket__header-price 10 860 ₽
+                        .baron.drop-basket__scroll
+                          .baron__rel
+                            .baron__track
+                              .baron__free
+                                .baron__bar
+                            .baron__scroller
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+                              a.drop-basket__item(href="catalog-single.html")
+                                .drop-basket__img
+                                  img(src="img/content/product-1.png" alt="Show punto batİk design")
+                                  span.drop-basket__blur(style="background-image: url('img/content/product-1.png')")
+                                .drop-basket__content
+                                  h3.drop-basket__title Show punto batİk design
+                                  span.drop-basket__qual 4 упак.
+                                  span.drop-basket__price 7 999 ₽
+
+
     .page-header__bottom.d-none.d-xl-block(class=`${!mod ? 'page-header__bottom--line' : ''}`)
       .container
         .page-header__rel
@@ -112,109 +224,112 @@ mixin page-header(mod)
                       use(xlink:href="img/symbols.svg#icon-serch")
           .catalog
             .catalog__row
-              .catalog__col.catalog__col--xl-2
+              .catalog__col
                 .product-list
                   h3.product-list__title Все для пряжи
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Пряжа
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Alize (Ализе)
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Magic
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nako
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Vita
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Vita Cotton
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Color City
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") YarnArt
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Adelia
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nazar
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Kartopu
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Knitka
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Журналы для вязания
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Alize (Ализе)
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Magic
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nako
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Vita
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Vita Cotton
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Color City
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") YarnArt
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Adelia
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nazar
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Kartopu
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Knitka
-              .catalog__col.catalog__col--xl-2
+                  .product-list__group
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Пряжа
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Alize (Ализе)
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Magic
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nako
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Vita
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Vita Cotton
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Color City
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") YarnArt
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Adelia
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nazar
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Kartopu
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Knitka
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Журналы для вязания
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Alize (Ализе)
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Magic
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nako
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Vita
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Vita Cotton
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Color City
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") YarnArt
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Adelia
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nazar
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Kartopu
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Knitka
+              .catalog__col
                 .product-list
-                  h3.product-list__title Швейная #[br] фурнитура
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Иглы и булавки
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Ручные иглы
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Для бытовой машинки
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Для промышленной машинки
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Булавки
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Игольницы и наборы
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Материалы
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Alize (Ализе)
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Magic
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nako
-              .catalog__col.catalog__col--xl-2
+                  h3.product-list__title Швейная фурнитура
+                  .product-list__group
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Иглы и булавки
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Ручные иглы
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Для бытовой машинки
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Для промышленной машинки
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Булавки
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Игольницы и наборы
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Материалы
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Alize (Ализе)
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Magic
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nako
+              .catalog__col
                 .product-list
                   h3.product-list__title Товары для рукоделия
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Алмазная мозаика
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Полная выкладка
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Частичная выкладка
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Раскройки  по номерам
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Alize (Ализе)
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Magic
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nako
-                  .product-list__subitem
-                    h4.product-list__subtitle.js-collapse Схемы для вышивки
-                    ul.product-list__list
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Alize (Ализе)
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Magic
-                      li.product-list__item
-                        a.product-list__link(href="catalog.html") Nako
+                  .product-list__group
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Алмазная мозаика
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Полная выкладка
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Частичная выкладка
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Раскройки  по номерам
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Alize (Ализе)
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Magic
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nako
+                    .product-list__subitem
+                      h4.product-list__subtitle.js-collapse Схемы для вышивки
+                      ul.product-list__list
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Alize (Ализе)
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Magic
+                        li.product-list__item
+                          a.product-list__link(href="catalog.html") Nako

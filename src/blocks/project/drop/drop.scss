@@ -1,0 +1,42 @@
+.drop {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 14px;
+  z-index: 9;
+  min-width: 146px;
+  transition: $time;
+
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 20px;
+    border: 8px solid transparent;
+    border-bottom: 10px solid $white;
+  }
+}
+
+.drop__wrap {
+  background: linear-gradient(180deg, #FEFEFE 0%, #FAFAFA 100%);
+  box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
+  border-radius: 5px;
+}
+
+.drop__item a {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3A426D;
+  padding: 10px 14px;
+  border-bottom: 0.5px solid rgba(204, 220, 236, 0.65);
+  transition: $time;
+
+  &:hover {
+    color: $color-main;
+  }
+}

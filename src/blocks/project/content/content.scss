@@ -9,9 +9,12 @@
     &--news {
       padding-bottom: 100px;
     }
+  }
 
-    &--modal {
-      padding-bottom: 183px;
+  &--modal {
+    padding: 20px 15px ;
+    @media (min-width: $screen-xl) {
+      padding: 40px 65px 45px;
     }
   }
 
@@ -113,6 +116,10 @@
   &--6 {
     @include col(xs, 6, 12, 10px);
     @include col(xl, 6, 12);
+  }
+
+  &--xl-2_10 {
+    @include col(xl, 2, 10);
   }
 
   &--md-4 {

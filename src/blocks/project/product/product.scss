@@ -15,8 +15,8 @@
 
       .add-basket {
         opacity: 1;
-        visibility: visible;
-        z-index: 1;
+        //visibility: visible;
+        //z-index: 1;
       }
     }
   }
@@ -25,8 +25,8 @@
 .product .add-basket {
   @media (min-width: $screen-xl) {
     opacity: 0;
-    visibility: hidden;
-    z-index: -1;
+    //visibility: hidden;
+    //z-index: -1;
   }
 }
 
@@ -155,4 +155,10 @@
 
 .product__num {
   margin-right: 15px;
+}
+
+.product__wrap-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }

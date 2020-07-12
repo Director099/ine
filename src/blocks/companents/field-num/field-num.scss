@@ -34,6 +34,9 @@
     box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 
+    width: 100%;
+    max-width: 107px;
+
     -moz-appearance:textfield;
 
     &::-webkit-outer-spin-button,

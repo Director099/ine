@@ -28,7 +28,6 @@ $z-index-modal:               100 !default;
   overflow: hidden;
   background: #F4F5F9;
   padding: 0;
-  margin: 5px;
   width: auto;
   height: auto;
   border: 1px solid #DFE2ED;
@@ -51,6 +50,16 @@ $z-index-modal:               100 !default;
 
     .modal__dialog {
       width: 100%;
+    }
+  }
+
+  &--w-big {
+    .modal__dialog {
+      max-height: calc(100% - 80px);
+      @media (min-width: $screen-lg) {
+        max-width: 1078px;
+        width: 100%;
+      }
     }
   }
 
@@ -85,9 +94,24 @@ $z-index-modal:               100 !default;
     flex-shrink: 0;
     border-bottom: 1px solid #DFE2ED;
 
-    &--plr0 {
-      padding-left: 0;
-      padding-right: 0;
+    &--p0 {
+      padding: 0;
+    }
+
+    &--pb {
+      padding-bottom: 20px;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 40px;
+      }
+    }
+
+    &--ident {
+      padding: 20px 15px 20px;
+
+      @media (min-width: $screen-xl) {
+        padding: 40px 65px 40px;
+      }
     }
 
     &--no-line {
@@ -107,9 +131,6 @@ $z-index-modal:               100 !default;
       font-weight: 500;
     }
 
-    &--line {
-
-    }
 
     a {
       text-decoration: underline;
@@ -197,3 +218,26 @@ $z-index-modal:               100 !default;
     transform: translateY(0);
   }
 }
+
+.modal__baron {
+  padding: 0 15px 0px;
+  max-height: 500px;
+  @media (min-width: $screen-xl) {
+    //max-height: 100%;
+    padding: 0 65px 140px;
+  }
+}
+
+.modal__baron .baron__track {
+  @media (min-width: $screen-xl) {
+    right: -15px;
+  }
+}
+
+.modal__content .content {
+  padding-bottom: 0;
+}
+
+//.modal__baron .baron__scroller {
+//  padding-bottom: 350px;
+//}

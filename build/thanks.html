@@ -9,6 +9,11 @@
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
     <meta content="notranslate" name="google">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
@@ -69,19 +74,16 @@
                                             <use xlink:href="img/symbols.svg#icon-user"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none">
                                     <button class="icon-btn js-show-phone">
                                         <svg width="22" height="22" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-phone"></use>
                                         </svg>
                                     </button>
-                                </div>
-                                <div class="d-xl-none"><a class="icon-btn" href="basket.html">
+                                    <button class="icon-btn js-show-basket">
                                         <svg width="27" height="23" fill="none">
                                             <use xlink:href="img/symbols.svg#basket"></use>
-                                        </svg><span class="icon-btn__quan">5</span></a></div>
-                                <div class="d-xl-none">
+                                        </svg><span class="icon-btn__quan">5</span>
+                                    </button>
                                     <button class="icon-btn js-show-search">
                                         <svg width="20" height="20" fill="none">
                                             <use xlink:href="img/symbols.svg#icon-serch"></use>
@@ -207,6 +209,7 @@
     <script src="libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="libs/inputmask/dist/inputmask.min.js"></script>
     <script src="libs/noUiSlider/nouislider.min.js"></script>
+    <script src="libs/baron/baron.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

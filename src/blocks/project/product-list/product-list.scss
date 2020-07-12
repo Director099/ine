@@ -1,8 +1,19 @@
+.product-list {
+  height: 100%;
+  border-right: 0.5px solid rgba(204, 220, 236, 0.65);
+}
+
+.product-list__group {
+  padding: 28px 18px;
+}
+
 .product-list__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  padding: 38px 18px 20px;
+  border-bottom: 0.5px solid rgba(204, 220, 236, 0.65);
 }
 
 .product-list__list {
@@ -38,6 +49,7 @@
 
 .product-list__subitem {
   margin-bottom: 10px;
+  padding-left: 15px;
 
   &:last-child {
     margin-bottom: 0;

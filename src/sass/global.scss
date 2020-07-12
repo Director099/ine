@@ -44,8 +44,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-:focus {
+:focus,
+button:focus,
+.btn:focus {
   outline: none;
+  box-shadow: none;
 }
 
 @media (max-width: $screen-lg - 1) {

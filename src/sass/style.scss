@@ -25,6 +25,7 @@
 @import "../blocks/companents/dropdown/dropdown";
 @import "../blocks/companents/field-checkbox/field-checkbox";
 @import "../blocks/companents/field-num/field-num";
+@import "../blocks/companents/baron/baron";
 @import "../blocks/companents/modal/modal";
 
 
@@ -55,15 +56,15 @@
 @import "../blocks/project/mb-product/mb-product";
 @import "../blocks/project/curtain/curtain";
 @import "../blocks/project/user/user";
+@import "../blocks/project/compare/compare";
+@import "../blocks/project/drop/drop";
+@import "../blocks/project/drop-basket/drop-basket";
+
 
 .fancybox-active {
   @media (max-width: $screen-xl - 1) {
     overflow: hidden;
   }
-}
-
-.fancybox-slide--html {
-  padding: 0;
 }
 
 .text-danger {
@@ -105,7 +106,7 @@
   display: inline-block;
   padding: 0;
   border: 0;
-  margin-left: 25px;
+  margin-left: 23px;
   cursor: pointer;
 }
 

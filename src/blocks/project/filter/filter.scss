@@ -45,6 +45,12 @@
     margin-right: 21px;
     -moz-appearance:textfield;
 
+    max-width: inherit;
+
+    @media (min-width: $screen-xl) {
+      max-width: 91px;
+    }
+
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;

@@ -43,8 +43,10 @@
 }
 
 .js-category .swiper-slide {
+  margin-bottom: 20px;
   @media (max-width: $screen-xl - 1) {
     max-width: 130px;
+    margin-bottom: 0;
   }
 }
 

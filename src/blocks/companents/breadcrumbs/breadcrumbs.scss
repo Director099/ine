@@ -22,7 +22,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
 
     &:hover,
     &:focus {
-      color: $text-color;
+      color: $color-main;
       text-decoration: none;
     }
   }

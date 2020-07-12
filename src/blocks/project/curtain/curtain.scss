@@ -86,3 +86,8 @@
   line-height: 13px;
   color: rgba($text-color, 0.5);
 }
+
+.curtain__scroll {
+  height: 250px;
+  overflow: auto;
+}
