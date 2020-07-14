@@ -349,6 +349,12 @@ a.btn--disabled {
     background-color: white;
     border: 1px solid #dfe2ed;
 }
+.btn--white-b:hover, .btn--white-b:focus {
+    color: #ffffff;
+    background-color: #566dfb;
+    border: 1px solid #566dfb;
+    box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+}
 .btn--main {
     color: #ffffff;
     background-color: #566dfb;
@@ -1508,6 +1514,7 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 16px;
 }
 .product {
+    position: relative;
     padding: 10px 10px 30px;
     border: 1px solid #dfe2ed;
     border-radius: 5px;
@@ -2653,6 +2660,28 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 .drop-basket__scroll {
     max-height: 430px;
+}
+.num-prod {
+    position: absolute;
+    top: -13px;
+    right: -4px;
+    width: 32px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3a426d;
+    text-align: center;
+    background: url("../img/icon/icon-quan-basket.svg") no-repeat center/contain;
+}
+.num-prod b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 7px 3px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .text-danger {
     color: #d8544f;

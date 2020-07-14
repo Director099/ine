@@ -1,5 +1,7 @@
-mixin product-preview(num)
+mixin product-preview(num, basket)
   .product-preview
+    if(basket)
+      +num-prod()
     span.product-preview__number= num
     .product-preview__img
       img(src="img/content/product-1.png", alt="Изображение")

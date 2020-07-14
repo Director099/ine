@@ -103,6 +103,14 @@ $border-radius:               5px !default;
   &--white-b {
     background-color: $white;
     border: 1px solid #DFE2ED;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #566DFB;
+      border: 1px solid #566DFB;
+      box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+    }
   }
 
    &--main {
