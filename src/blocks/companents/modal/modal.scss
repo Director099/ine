@@ -54,8 +54,8 @@ $z-index-modal:               100 !default;
   }
 
   &--w-big {
+    //max-height: calc(100vh - 50px);
     .modal__dialog {
-      max-height: calc(100% - 80px);
       @media (min-width: $screen-lg) {
         max-width: 1078px;
         width: 100%;
@@ -85,7 +85,7 @@ $z-index-modal:               100 !default;
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #F4F5F9;
     outline: 0;
   }
 
@@ -221,9 +221,9 @@ $z-index-modal:               100 !default;
 
 .modal__baron {
   padding: 0 15px 0px;
-  max-height: 500px;
+  max-height: calc(100vh - 90px);
   @media (min-width: $screen-xl) {
-    //max-height: 100%;
+    max-height: calc(100vh - 150px);
     padding: 0 65px 140px;
   }
 }

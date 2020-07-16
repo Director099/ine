@@ -61,7 +61,9 @@
 @import "../blocks/project/drop-basket/drop-basket";
 @import "../blocks/project/num-prod/num-prod";
 
-
+.overflow {
+  overflow: hidden;
+}
 
 .fancybox-active {
   @media (max-width: $screen-xl - 1) {

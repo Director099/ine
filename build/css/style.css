@@ -436,7 +436,7 @@ a.btn--disabled {
     font-size: 12px;
     line-height: 14px;
     font-family: inherit;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 1px solid #dfe2ed;
     border-radius: 5px;
     appearance: textfield;
@@ -1022,9 +1022,6 @@ input:checked ~ .field-checkbox__name-text:after {
 .modal--full .modal__dialog {
     width: 100%;
 }
-.modal--w-big .modal__dialog {
-    max-height: calc(100% - 80px);
-}
 .modal__dialog {
     position: relative;
     margin: 0;
@@ -1037,7 +1034,7 @@ input:checked ~ .field-checkbox__name-text:after {
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    background-color: #ffffff;
+    background-color: #f4f5f9;
     outline: 0;
 }
 .modal__header {
@@ -1127,7 +1124,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 .modal__baron {
     padding: 0 15px 0px;
-    max-height: 500px;
+    max-height: calc(100vh - 90px);
 }
 .modal__content .content {
     padding-bottom: 0;
@@ -2469,7 +2466,8 @@ input:checked ~ .field-checkbox__name-text:after {
     color: rgba(58, 66, 109, 0.5);
 }
 .curtain__scroll {
-    height: 250px;
+    max-height: calc(100vh - 104px);
+    height: 100vh;
     overflow: auto;
 }
 .user {
@@ -2682,6 +2680,10 @@ input:checked ~ .field-checkbox__name-text:after {
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #566dfb;
+}
+.overflow {
+    overflow: hidden;
 }
 .text-danger {
     color: #d8544f;
@@ -2881,6 +2883,7 @@ input:checked ~ .field-checkbox__name-text:after {
         padding: 40px 65px 40px;
     }
     .modal__baron {
+        max-height: calc(100vh - 150px);
         padding: 0 65px 140px;
     }
     .modal__baron .baron__track {

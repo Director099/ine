@@ -194,6 +194,7 @@
           }
         }
       });
+
     });
   }
 })();
@@ -473,13 +474,23 @@
 
   $('.js-show-basket').on('click', function() {
     $('#basket').toggleClass('active');
+    // $('body').toggleClass('overflow');
     $('#phone, #search-mobile, #user').removeClass('active');
+
     fancyClose();
   });
 
   $('.js-close-curtain').on('click', function () {
     $(this).parents('.curtain').removeClass('active');
+    // $('body').removeClass('overflow');
   })
+
+  // $('.page-header').on('click', function () {
+  //   $('body').removeClass('overflow');
+  //   if(!$('.curtain').hasClass('active')) {
+  //     $('.curtain').removeClass('active');
+  //   }
+  // })
 })();
 
 function baronScroll() {

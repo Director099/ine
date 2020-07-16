@@ -88,6 +88,7 @@
 }
 
 .curtain__scroll {
-  height: 250px;
+  max-height: calc(100vh - 104px);
+  height: 100vh;
   overflow: auto;
 }
