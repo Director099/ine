@@ -200,6 +200,25 @@
 })();
 
 /**
+ * @description добавление товара в корзину
+ */
+
+(function () {
+  $('.js-basket').on('click', function (e) {
+    e.preventDefault();
+    const inputVal = $(this).prev().find('input').val();
+    const basketProduct = $(this).parents('.product, .product-preview').find('.num-prod');
+    console.log(inputVal);
+    if (inputVal == '0' || inputVal == '') {
+      basketProduct.addClass('d-none');
+    } else {
+      basketProduct.removeClass('d-none');
+      basketProduct.find('b').text(inputVal);
+    }
+  })
+})();
+
+/**
  * @description Друпдаун
  */
 

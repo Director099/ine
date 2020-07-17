@@ -1,7 +1,6 @@
 mixin product(category, basket)
   article.product
-    if(basket)
-      +num-prod()
+    +num-prod().d-none
     .product__row
       a.product__picture(href=`${category === true ? "catalog-single.html" : "catalog-single2.html"}` data-label="img/content/product-1.png")
         img(src="img/content/product-1.png", alt="Show punto batİk design")
@@ -30,8 +29,8 @@ mixin product(category, basket)
                   attrs: {
                       name: 'quantity',
                       max: '1000',
-                      min: '1',
+                      min: '0',
                       step: '1',
                   }
               }).add-basket__num
-              button.btn.btn--main.btn--r-middle В корзину
+              button.btn.btn--main.btn--r-middle.js-basket В корзину

@@ -1,7 +1,6 @@
-mixin product-preview(num, basket)
+mixin product-preview(num)
   .product-preview
-    if(basket)
-      +num-prod()
+    +num-prod().d-none
     span.product-preview__number= num
     .product-preview__img
       img(src="img/content/product-1.png", alt="Изображение")
@@ -18,8 +17,8 @@ mixin product-preview(num, basket)
               attrs: {
                   name: 'quantity',
                   max: '1000',
-                  min: '1',
+                  min: '0',
                   step: '1',
               }
           }).add-basket__num
-          button.btn.btn--main.btn--r-middle В корзину
+          button.btn.btn--main.btn--r-middle.js-basket В корзину
