@@ -46,6 +46,7 @@
       type : 'inline',
       touch: false,
     })
+    $('body').removeClass('overflow');
   })
 })();
 
@@ -474,6 +475,7 @@
 
   $('.js-show-phone').on('click', function() {
     $('#phone').toggleClass('active');
+    $('body').removeClass('overflow');
     $('#search-mobile, #user, #basket').removeClass('active');
     fancyClose();
 
@@ -481,19 +483,21 @@
 
   $('.js-show-search').on('click', function() {
     $('#search-mobile').toggleClass('active');
+    $('body').removeClass('overflow');
     $('#phone, #user, #basket').removeClass('active');
     fancyClose();
   });
 
   $('.js-show-user').on('click', function() {
     $('#user').toggleClass('active');
+    $('body').removeClass('overflow');
     $('#phone, #search-mobile, #basket').removeClass('active');
     fancyClose();
   });
 
   $('.js-show-basket').on('click', function() {
     $('#basket').toggleClass('active');
-    // $('body').toggleClass('overflow');
+    $('body').toggleClass('overflow');
     $('#phone, #search-mobile, #user').removeClass('active');
 
     fancyClose();
@@ -501,7 +505,7 @@
 
   $('.js-close-curtain').on('click', function () {
     $(this).parents('.curtain').removeClass('active');
-    // $('body').removeClass('overflow');
+    $('body').removeClass('overflow');
   })
 
   // $('.page-header').on('click', function () {
