@@ -1022,9 +1022,6 @@ input:checked ~ .field-checkbox__name-text:after {
 .modal--full .modal__dialog {
     width: 100%;
 }
-.modal--w-big {
-    width: 100vw;
-}
 .modal__dialog {
     position: relative;
     margin: 0;
