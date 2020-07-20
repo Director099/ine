@@ -55,10 +55,11 @@ $z-index-modal:               100 !default;
 
   &--w-big {
     //max-height: calc(100vh - 50px);
+    width: 100vw;
     .modal__dialog {
       @media (min-width: $screen-lg) {
-        max-width: 1078px;
-        width: 100%;
+        width: 1078px;
+        //width: 100%;
       }
     }
   }
