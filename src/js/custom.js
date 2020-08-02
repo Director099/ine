@@ -57,7 +57,6 @@
 
 (function () {
   let swiper = new Swiper('.js-banner', {
-    loop: true,
     navigation: {
       nextEl: '.swiper-button--next',
       prevEl: '.swiper-button--prev',
@@ -72,6 +71,11 @@
       }
     }
   });
+
+  if($(".js-banner .swiper-slide").length == 1) {
+    $('.swiper-wrapper').addClass( "disabled" );
+    $('.swiper-pagination').addClass( "disabled" );
+  }
 })();
 
 /**

@@ -90,6 +90,7 @@ mixin page-header(mod)
                 h3.drop-basket__title Show punto batİk design
                 span.drop-basket__qual 4 упак.
                 span.drop-basket__price 7 999 ₽
+
       .container
         .page-header__row.page-header__row--sb
           .page-header__logo
@@ -143,8 +144,7 @@ mixin page-header(mod)
                     .drop__wrap
                       .drop-basket
                         header.drop-basket__header.drop-basket__header--sb
-                          a.btn.btn--main.btn--r-middle(href="basket.html") Перейти в корзину
-                          strong.drop-basket__header-price 10 860 ₽
+                          a.drop-basket__bas-link(href="basket.html") Моя корзина
                         .baron.drop-basket__scroll
                           .baron__rel
                             .baron__track
@@ -199,7 +199,9 @@ mixin page-header(mod)
                                   h3.drop-basket__title Show punto batİk design
                                   span.drop-basket__qual 4 упак.
                                   span.drop-basket__price 7 999 ₽
-
+                        footer.drop-basket__header.drop-basket__header--bg.drop-basket__header--sb
+                          strong.drop-basket__header-price #[span Всего:] 10 860 ₽
+                          a.btn.btn--main(href="basket.html") Оформить заказ
 
     .page-header__bottom.d-none.d-xl-block(class=`${!mod ? 'page-header__bottom--line' : ''}`)
       .container

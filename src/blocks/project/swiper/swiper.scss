@@ -131,3 +131,10 @@
     bottom: 27px;
   }
 }
+
+.swiper-wrapper.disabled {
+  transform: translate3d(0px, 0, 0) !important;
+}
+.swiper-pagination.disabled {
+  display: none;
+}

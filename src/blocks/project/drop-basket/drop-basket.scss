@@ -8,6 +8,10 @@
   padding: 20px;
   border-bottom: 1px solid rgba(204, 220, 236, 0.65);
 
+  &--bg {
+    background: #F4F5F9;
+  }
+
   &--sb {
     display: flex;
     justify-content: space-between;
@@ -20,12 +24,25 @@
   font-size: 18px;
   line-height: 18px;
   color: $text-color;
+
+  span {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
 }
 
 .drop-basket__item {
   display: flex;
-  padding: 20px 20px 25px;
+  padding: 12px 20px 12px;
   color: inherit;
+  transition: $time;
+
+  &:hover {
+    background: rgba(204, 220, 236, 0.2);
+  }
 }
 
 .drop-basket__img {
@@ -84,4 +101,14 @@
 
 .drop-basket__scroll {
   max-height: 430px;
+}
+
+.drop-basket__bas-link {
+  color: $text-color;
+  transition: $time;
+
+  &:hover {
+    text-decoration-line: underline;
+    color: #566DFB;
+  }
 }

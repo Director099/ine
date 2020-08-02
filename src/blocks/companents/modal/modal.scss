@@ -229,8 +229,10 @@ $z-index-modal:               100 !default;
 }
 
 .modal__baron .baron__track {
+  display: none;
   @media (min-width: $screen-xl) {
-    right: -15px;
+    right: -50px;
+    display: block;
   }
 }
 

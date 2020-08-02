@@ -61,6 +61,17 @@
 @import "../blocks/project/drop-basket/drop-basket";
 @import "../blocks/project/num-prod/num-prod";
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
 .overflow {
   overflow: hidden;
 }
@@ -127,7 +138,7 @@
   align-items: center;
   color: $white;
   border-radius: 50px;
-  background-color: $color-main;
+  background-color: #566DFB;
 }
 
 .count-hide .content__col:nth-child(n+7) {
