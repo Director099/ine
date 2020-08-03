@@ -2107,8 +2107,20 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 14px;
 }
 .filter__group {
+    position: relative;
     padding: 17px 30px;
-    border-bottom: 1px solid #dfe2ed;
+}
+.filter__group::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 20px;
+    height: 1px;
+    background-color: rgba(204, 220, 236, 0.5);
+}
+.filter__group--no-line::after {
+    display: none;
 }
 .filter__btn {
     width: 100%;
@@ -2143,6 +2155,9 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 .filter__field-row input:last-child {
     margin-right: 0;
+}
+.filter__scroll {
+    max-height: 360px;
 }
 .filter-block__row {
     display: flex;
@@ -2343,6 +2358,12 @@ input:checked ~ .field-checkbox__name-text:after {
 .mb-product {
     margin-left: -15px;
     margin-right: -15px;
+}
+.mb-product__title[href] {
+    display: block;
+    background-color: white;
+    color: #3a426d;
+    font-weight: 400;
 }
 .mb-product__title.js-collapse {
     position: relative;

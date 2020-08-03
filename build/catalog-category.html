@@ -435,73 +435,82 @@
                                     <button class="btn dropdown__toggler" id="drop-01" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильтр по параметрам</button>
                                     <div class="dropdown__menu" aria-labelledby="drop-01">
                                         <form class="filter">
-                                            <div class="filter__group"><strong class="filter__title">Цена</strong>
-                                                <div class="filter__fieldset">
-                                                    <div class="filter__field-row">
-                                                        <input type="number" value="0" id="input-range-0" required="">
-                                                        <input type="number" value="100000" id="input-range-1" required="">
+                                            <div class="baron filter__scroll">
+                                                <div class="baron__rel">
+                                                    <div class="baron__track">
+                                                        <div class="baron__free">
+                                                            <div class="baron__bar"></div>
+                                                        </div>
                                                     </div>
-                                                    <div class="range" id="slider-range"></div>
+                                                    <div class="filter__group"><strong class="filter__title">Цена</strong>
+                                                        <div class="filter__fieldset">
+                                                            <div class="filter__field-row">
+                                                                <input type="number" value="0" id="input-range-0" required="">
+                                                                <input type="number" value="100000" id="input-range-1" required="">
+                                                            </div>
+                                                            <div class="range" id="slider-range"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__group"><strong class="filter__title">Состав</strong>
+                                                        <div class="filter__fieldset">
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Шерсть</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Вискоза</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Лен</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__group"><strong class="filter__title">Цвет</strong>
+                                                        <div class="filter__fieldset">
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Белый</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--yellow">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Желтый</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--green">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Зеленый</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-checkbox">
+                                                                <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--gradient">
+                                                                    <label class="field-checkbox__name">
+                                                                        <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Цветной</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="filter__group"><strong class="filter__title">Состав</strong>
-                                                <div class="filter__fieldset">
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Шерсть</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Вискоза</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Лен</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="filter__group"><strong class="filter__title">Цвет</strong>
-                                                <div class="filter__fieldset">
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Белый</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--yellow">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Желтый</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--green">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Зеленый</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field-checkbox">
-                                                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--gradient">
-                                                            <label class="field-checkbox__name">
-                                                                <input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Цветной</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="filter__group">
+                                            <div class="filter__group filter__group--no-line">
                                                 <button class="btn btn--main btn--s-middle filter__btn">Показыть</button>
                                                 <button class="btn btn--s-middle btn--white-b filter__btn" type="reset">Сбросить</button>
                                             </div>

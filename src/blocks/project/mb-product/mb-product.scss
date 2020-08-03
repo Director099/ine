@@ -3,6 +3,13 @@
   margin-right: -15px;
 }
 
+.mb-product__title[href] {
+  display: block;
+  background-color: $white;
+  color: #3a426d;
+  font-weight: 400;
+}
+
 .mb-product__title.js-collapse {
   position: relative;
 

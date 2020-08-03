@@ -46,80 +46,85 @@ block content
           .filter-block__row.filter-block__row--xl-sb.filter-block__row--xl-row
             +dropdown('Фильтр по параметрам', 'drop-01', 'left filter').filter-block__dropdown
               form.filter
-                .filter__group
-                  strong.filter__title Цена
-                  .filter__fieldset
-                    .filter__field-row
-                      input(type="number" value="0" id="input-range-0" required="")
-                      input(type="number" value="100000" id="input-range-1" required="")
-                    .range(id="slider-range")
-                .filter__group
-                  strong.filter__title Состав
-                  .filter__fieldset
-                    +field-checkbox([
-                        {
-                            title: 'Шерсть',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                    +field-checkbox([
-                        {
-                            title: 'Вискоза',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                    +field-checkbox([
-                        {
-                            title: 'Лен',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                .filter__group
-                  strong.filter__title Цвет
-                  .filter__fieldset
-                    +field-checkbox([
-                        {
-                            mods: 'white',
-                            title: 'Белый',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                    +field-checkbox([
-                        {
-                            mods: 'yellow',
-                            title: 'Желтый',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                    +field-checkbox([
-                        {
-                            mods: 'green',
-                            title: 'Зеленый',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                    +field-checkbox([
-                        {
-                            mods: 'gradient',
-                            title: 'Цветной',
-                            attrs: {
-                                name: 'check0',
-                            }
-                        },
-                    ])
-                .filter__group
+                .baron.filter__scroll
+                  .baron__rel
+                    .baron__track
+                      .baron__free
+                        .baron__bar
+                    .filter__group
+                      strong.filter__title Цена
+                      .filter__fieldset
+                        .filter__field-row
+                          input(type="number" value="0" id="input-range-0" required="")
+                          input(type="number" value="100000" id="input-range-1" required="")
+                        .range(id="slider-range")
+                    .filter__group
+                      strong.filter__title Состав
+                      .filter__fieldset
+                        +field-checkbox([
+                            {
+                                title: 'Шерсть',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                        +field-checkbox([
+                            {
+                                title: 'Вискоза',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                        +field-checkbox([
+                            {
+                                title: 'Лен',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                    .filter__group
+                      strong.filter__title Цвет
+                      .filter__fieldset
+                        +field-checkbox([
+                            {
+                                mods: 'white',
+                                title: 'Белый',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                        +field-checkbox([
+                            {
+                                mods: 'yellow',
+                                title: 'Желтый',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                        +field-checkbox([
+                            {
+                                mods: 'green',
+                                title: 'Зеленый',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                        +field-checkbox([
+                            {
+                                mods: 'gradient',
+                                title: 'Цветной',
+                                attrs: {
+                                    name: 'check0',
+                                }
+                            },
+                        ])
+                .filter__group.filter__group--no-line
                   button.btn.btn--main.btn--s-middle.filter__btn Показыть
                   button.btn.btn--s-middle.btn--white-b.filter__btn(type="reset") Сбросить
             +dropdown('По популярности', 'drop-02', 'right').filter-block__dropdown

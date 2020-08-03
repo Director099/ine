@@ -12,8 +12,23 @@
 }
 
 .filter__group {
+  position: relative;
   padding: 17px 30px;
-  border-bottom: 1px solid #DFE2ED;
+  //border-bottom: 1px solid #DFE2ED;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 20px;
+    height: 1px;
+    background-color: rgba(204, 220, 236, 0.5);
+  }
+
+  &--no-line::after {
+    display: none;
+  }
 }
 
 .filter__btn {
@@ -60,4 +75,8 @@
       margin-right: 0;
     }
   }
+}
+
+.filter__scroll {
+  max-height: 360px;
 }
