@@ -73,8 +73,8 @@
   });
 
   if($(".js-banner .swiper-slide").length == 1) {
-    $('.swiper-wrapper').addClass( "disabled" );
-    $('.swiper-pagination').addClass( "disabled" );
+    $('.js-banner .swiper-wrapper').addClass( "disabled" );
+    $('.js-banner .swiper-pagination').addClass( "disabled" );
   }
 })();
 

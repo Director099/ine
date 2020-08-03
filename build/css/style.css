@@ -2320,10 +2320,13 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 .product-list__subtitle {
     position: relative;
+    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
+    text-decoration: none;
+    color: #3a426d;
 }
 .product-list__subtitle::after {
     content: "";
@@ -2360,6 +2363,10 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 14px;
     text-decoration: none;
     color: #3a426d;
+    transition: 0.3s;
+}
+.product-list__link:hover {
+    color: #566dfb;
 }
 .mb-product {
     margin-left: -15px;
