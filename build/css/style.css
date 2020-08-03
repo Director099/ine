@@ -577,7 +577,7 @@ textarea.field-text__input {
     text-decoration: none;
 }
 .breadcrumbs a:hover, .breadcrumbs a:focus {
-    color: #0275d9;
+    color: #566dfb;
     text-decoration: none;
 }
 .breadcrumbs__item {
@@ -1642,10 +1642,10 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-right: 15px;
 }
 .navigation__link:hover {
-    color: #0275d9;
+    color: #566dfb;
 }
 .navigation__link:hover .burger {
-    color: #0275d9;
+    color: #566dfb;
 }
 .navigation__burger-sub {
     flex-shrink: 0;
@@ -1653,7 +1653,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-right: 15px;
 }
 .navigation__burger-sub:hover {
-    color: #0275d9;
+    color: #566dfb;
 }
 .n-article__title {
     margin-bottom: 34px;
@@ -1965,7 +1965,7 @@ input:checked ~ .field-checkbox__name-text:after {
     align-items: center;
     color: white;
     border-radius: 50px;
-    background-color: #0275d9;
+    background-color: #566dfb;
 }
 .basket__row {
     display: flex;
@@ -2591,7 +2591,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-left: 3px;
     color: white;
     border-radius: 50px;
-    background-color: #0275d9;
+    background-color: #566dfb;
 }
 .compare:hover .drop {
     visibility: visible;
@@ -2633,7 +2633,7 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
 }
 .drop__item a:hover {
-    color: #0275d9;
+    color: #566dfb;
 }
 .drop-basket__header {
     padding: 20px;
@@ -2691,7 +2691,7 @@ input:checked ~ .field-checkbox__name-text:after {
     color: #3a426d;
 }
 .drop-basket__title:hover {
-    color: #0275d9;
+    color: #566dfb;
 }
 .drop-basket__qual {
     display: block;
@@ -2766,7 +2766,7 @@ input:checked ~ .field-checkbox__name-text:after {
     color: #d8544f;
 }
 .text-main {
-    color: #0275d9;
+    color: #566dfb;
 }
 .text-success {
     color: #5cb75c;
