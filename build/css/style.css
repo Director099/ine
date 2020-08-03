@@ -962,6 +962,12 @@ input:checked ~ .field-checkbox__name-text:after {
     background-color: #f9e2e2;
 }
 .baron .baron__track {
+    display: none;
+}
+._scrollbar .baron__track {
+    display: block;
+}
+.baron .baron__track {
     position: absolute;
     z-index: 3;
     top: 2px;

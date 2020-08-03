@@ -78,6 +78,14 @@
 //}
 
 .baron .baron__track {
+  display: none;
+}
+
+._scrollbar .baron__track {
+  display: block;
+}
+
+.baron .baron__track {
   //opacity: 0;
   position: absolute;
   z-index: 3;
