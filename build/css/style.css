@@ -1542,6 +1542,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 10px;
 }
 .product__blur {
+    display: none;
     position: absolute;
     bottom: 0;
     top: 0;
@@ -1554,7 +1555,7 @@ input:checked ~ .field-checkbox__name-text:after {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .product__title {
     font-weight: 500;
@@ -1852,6 +1853,7 @@ input:checked ~ .field-checkbox__name-text:after {
     z-index: 1;
 }
 .product-preview__img::after {
+    display: none;
     content: "";
     position: absolute;
     bottom: 0;
@@ -1865,9 +1867,10 @@ input:checked ~ .field-checkbox__name-text:after {
 .product-preview__img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .product-preview__blur {
+    display: none;
     position: absolute;
     bottom: 0;
     top: 0;
