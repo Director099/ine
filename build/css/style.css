@@ -1051,7 +1051,7 @@ input:checked ~ .field-checkbox__name-text:after {
     padding-bottom: 20px;
 }
 .modal__header--ident {
-    padding: 20px 15px 20px;
+    padding: 20px 15px 15px;
 }
 .modal__header--no-line {
     border-bottom: 0;
@@ -1125,7 +1125,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 }
 .modal__baron {
-    padding: 0 15px 0px;
+    padding: 15px 15px 0px;
     max-height: calc(100vh - 90px);
 }
 .modal__baron .baron__track {
@@ -1732,6 +1732,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .product-card__table {
     margin-bottom: 20px;
     font-size: 12px;
+    border-bottom: 1px solid #dee2e6;
 }
 .product-card__table td:first-child {
     max-width: 60px;
@@ -2963,11 +2964,11 @@ input:checked ~ .field-checkbox__name-text:after {
         padding-bottom: 40px;
     }
     .modal__header--ident {
-        padding: 40px 65px 40px;
+        padding: 40px 65px 25px;
     }
     .modal__baron {
         max-height: calc(100vh - 150px);
-        padding: 0 65px 140px;
+        padding: 15px 65px 140px;
     }
     .modal__baron .baron__track {
         right: -50px;

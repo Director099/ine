@@ -107,10 +107,10 @@ $z-index-modal:               100 !default;
     }
 
     &--ident {
-      padding: 20px 15px 20px;
+      padding: 20px 15px 15px;
 
       @media (min-width: $screen-xl) {
-        padding: 40px 65px 40px;
+        padding: 40px 65px 25px;
       }
     }
 
@@ -220,11 +220,11 @@ $z-index-modal:               100 !default;
 }
 
 .modal__baron {
-  padding: 0 15px 0px;
+  padding: 15px 15px 0px;
   max-height: calc(100vh - 90px);
   @media (min-width: $screen-xl) {
     max-height: calc(100vh - 150px);
-    padding: 0 65px 140px;
+    padding: 15px 65px 140px;
   }
 }
 
