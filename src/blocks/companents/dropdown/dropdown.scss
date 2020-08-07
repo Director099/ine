@@ -25,7 +25,7 @@ $transition-time:             0.3s !default;
     max-width: 90vw;
     width: 1px;
     margin: 0;
-    background-color: #fff;
+    //background-color: #fff;
     color: $text-color;
     opacity: 0;
     visibility: hidden;
@@ -109,5 +109,15 @@ $transition-time:             0.3s !default;
 }
 
 .dropdown--open .dropdown__toggler::after {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.dropdown:hover .dropdown__menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown__toggler::after {
   transform: translateY(-35%) rotate(-135deg);
 }

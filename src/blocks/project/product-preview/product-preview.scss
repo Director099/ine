@@ -80,24 +80,12 @@
   img {
     width: 100%;
     height: 100%;
-    //object-fit: contain;
     object-fit: cover;
   }
 
   @media (min-width: $screen-xl) {
     height: 161px;
   }
-}
-
-.product-preview__blur {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  filter: blur(75px);
-  z-index: -1;
 }
 
 .product-preview__price {

@@ -148,7 +148,7 @@
   overflow: hidden;
 
   img {
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -160,16 +160,6 @@
   &--height-thumb {
     height: 69px;
   }
-}
-
-.product-card__blur {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  filter: blur(75px);
-  z-index: -1;
 }
 
 .product-card__slider-mb {

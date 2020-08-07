@@ -30,6 +30,12 @@
   }
 }
 
+//.filter-block__dropdown:hover .dropdown__menu  {
+//  visibility: visible;
+//  opacity: 1;
+//  z-index: 1;
+//}
+
 .filter-block__dropdown > .btn {
   position: relative;
   font-size: 14px;
@@ -56,10 +62,10 @@
 .filter-block__dropdown .dropdown__menu {
   width: 100%;
   max-width: 100%;
-  margin-top: 10px;
+  padding-top: 10px;
 
   @media (min-width: $screen-xl) {
-    margin-top: 28px;
+    padding-top: 28px;
     width: auto;
     max-width: inherit;
   }

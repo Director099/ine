@@ -56,7 +56,7 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
@@ -85,18 +85,6 @@
   display: block;
   font-size: 12px;
   line-height: 18px;
-}
-
-.drop-basket__blur {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  filter: blur(75px);
-  z-index: 0;
-  background-size: cover;
-  background-position: center;
 }
 
 .drop-basket__scroll {
