@@ -763,12 +763,6 @@ textarea.field-text__input {
     overflow: hidden;
     transition: opacity 0.3s;
 }
-.dropdown--open .dropdown__menu {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
-    width: auto;
-}
 .dropdown--up .dropdown__menu {
     top: auto;
     bottom: 100%;
@@ -805,9 +799,6 @@ textarea.field-text__input {
     height: 10px;
     transform: translateY(-50%);
     background: url("../img/icon/icon-filter.svg") no-repeat center/contain;
-}
-.dropdown--open .dropdown__toggler::after {
-    transform: translateY(-35%) rotate(-135deg);
 }
 .dropdown:hover .dropdown__menu {
     visibility: visible;
@@ -2312,22 +2303,29 @@ input:checked ~ .field-checkbox__name-text:after {
     cursor: pointer;
     text-decoration: none;
     color: #3a426d;
-}
-.product-list__subtitle::after {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: -15px;
-    width: 6px;
-    height: 6px;
-    border-right: 1px solid #3a426d;
-    border-bottom: 1px solid #3a426d;
-    transform: rotate(-45deg);
-    transition: 0.3s;
+    margin-bottom: 15px;
 }
 .product-list__subtitle.active::after {
     top: 2px;
     transform: rotate(45deg);
+}
+.product-list__icon svg {
+    fill: #3a426d;
+}
+.product-list__subtitle .product-list__icon {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    z-index: 1;
+    transition: 0.3s;
+}
+.product-list__subtitle.active .product-list__icon {
+    top: 0px;
+    transform: rotate(90deg);
+}
+.product-list__subtitle.active .product-list__icon svg {
+    fill: #566dfb;
 }
 .product-list__subitem {
     margin-bottom: 10px;
@@ -2718,6 +2716,7 @@ input:checked ~ .field-checkbox__name-text:after {
     color: #3a426d;
     text-align: center;
     background: url("../img/icon/icon-quan-basket.svg") no-repeat center/contain;
+    z-index: 1;
 }
 .num-prod b {
     position: absolute;

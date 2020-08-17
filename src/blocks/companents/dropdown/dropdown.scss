@@ -36,15 +36,15 @@ $transition-time:             0.3s !default;
 
 
 
-  &--open {
-
-    #{$block-name}__menu {
-      z-index: 1;
-      visibility: visible;
-      opacity: 1;
-      width: auto;
-    }
-  }
+  //&--open {
+  //
+  //  #{$block-name}__menu {
+  //    z-index: 1;
+  //    visibility: visible;
+  //    opacity: 1;
+  //    width: auto;
+  //  }
+  //}
 
   &--up {
 
@@ -108,9 +108,11 @@ $transition-time:             0.3s !default;
   }
 }
 
-.dropdown--open .dropdown__toggler::after {
-  transform: translateY(-35%) rotate(-135deg);
-}
+//.dropdown--open .dropdown__toggler::after {
+//  transform: translateY(-35%) rotate(-135deg);
+//}
+
+
 
 .dropdown:hover .dropdown__menu {
   visibility: visible;

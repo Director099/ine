@@ -30,25 +30,49 @@
   cursor: pointer;
   text-decoration: none;
   color: #3A426D;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: -15px;
-    width: 6px;
-    height: 6px;
-    border-right: 1px solid $text-color;
-    border-bottom: 1px solid $text-color;
-    transform: rotate(-45deg);
-    transition: $time;
-  }
+  margin-bottom: 15px;
+  //
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  top: 4px;
+  //  left: -15px;
+  //  width: 6px;
+  //  height: 6px;
+  //  border-right: 1px solid $text-color;
+  //  border-bottom: 1px solid $text-color;
+  //  transform: rotate(-45deg);
+  //  transition: $time;
+  //}
 
   &.active::after {
     top: 2px;
     transform: rotate(45deg);
   }
 }
+
+.product-list__icon svg {
+  fill: #3A426D;
+}
+
+.product-list__subtitle .product-list__icon {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  z-index: 1;
+  transition: $time;
+}
+
+.product-list__subtitle.active .product-list__icon {
+  top: 0px;
+  transform: rotate(90deg);
+
+  svg {
+    fill: #566DFB;
+  }
+}
+
 
 .product-list__subitem {
   margin-bottom: 10px;

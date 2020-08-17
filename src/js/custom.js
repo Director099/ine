@@ -445,6 +445,22 @@
 })();
 
 /**
+ * @description Коллапс ховер
+ */
+
+(function () {
+  $('.js-collapse-hover .product-list__text').hover(function(e) {
+    $(this).parent().addClass('active');
+    $(this).parent().next().slideDown();
+  });
+
+  $('.js-collapse-hover .product-list__icon').hover(function(e) {
+    $(this).parent().removeClass('active');
+    $(this).parent().next().slideUp();
+  });
+})();
+
+/**
  * @description Открыть каталог
  */
 
